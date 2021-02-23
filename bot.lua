@@ -293,6 +293,7 @@
             end
         end
     --[[ channelPerm ]]
+
         help.channelPerm = {}
 
         --https://github.com/SinisterRectus/Discordia/wiki/Enumerations#permission
@@ -301,7 +302,6 @@
             addReactions = true, readMessages = true, sendMessages = true,
             embedLinks = true, attachFiles = true, readMessageHistory = true,
             useExternalEmojis = true, 
-
         }
 
         local function _(self, perm, channel, member)
@@ -315,12 +315,41 @@
         end
 
         setmetatable(help.channelPerm,{__call = _})
+    --[[ perms ]]
+        help.perm = {}
+
+        --https://github.com/SinisterRectus/Discordia/wiki/Enumerations#permission
+
+        help.perm.dm = classes.Permissions.fromMany(
+            'addReactions', 'readMessages',
+            'sendMessages', 'embedLinks',
+            'attachFiles', 'readMessageHistory',
+            'useExternalEmojis'
+        )
+
+        local function _(self, member, guild)
+            local channel 
+            if class.isInstance(guild, classes.TextChannel) then
+                channel = guild
+                guild = channel.guild
+            end
+            if (not guild) and class.isInstance(member, classes.Member) then
+                guild = member.guild
+            end
+
+            if guild then
+                local member = guild._members:get(resolver.userId(member))
+                return member and member:getPermissions(channel)
+            else
+                return self.dm
+            end
+        end
+
+        setmetatable(help.perm,{__call = _})
     --[[ canReply ]]
         function help.canReply(message)
             local user = message.author
             return (
-                -- can reply at all
-                help.channelPerm('sendMessages', message.channel) and
                 -- ignore system messages
                 message.type == 0 and
                 -- stop resursion
@@ -649,8 +678,8 @@
 
         setmetatable(help.limits,{__call = _})
     --[[ runCmd ]]
-        function help.runCmd(cmd, msg, param, cantErr)
-            local succ, ret, ret2 = pcall(cmd.run, msg, param)
+        function help.runCmd(cmd, msg, param, perms, cantErr)
+            local succ, ret, ret2 = pcall(cmd.run, msg, param, perms)
 
             if succ then
                 ret = (ret ~= nil) and (class.isObject(ret) or
@@ -665,7 +694,7 @@
                 else
                     if succ and ret then
                         if ret == '' then
-                            if help.channelPerm('embedLinks', msg.channel) then
+                            if perms.bot:has'embedLinks' then
                                 succ, ret = msg:reply{embed={description=''}}
                                 if succ then
                                     succ._keepEmbedHidden = true
@@ -689,14 +718,14 @@
                             succ, ret = msg:reply(ret)
                         end
                     elseif succ and (not ret) and (ret2) then
-                        help.runCmd(commands.sorry, msg, ret2, true)
+                        help.runCmd(commands.sorry, msg, ret2, perms, true)
                         return nil
                     end
                 end
             end
 
             if (not succ) and (not cantErr) then
-                help.runCmd(commands.error, msg, help.concat";"(cmd.name, ret), true)
+                help.runCmd(commands.error, msg, help.concat";"(cmd.name, ret), perms, true)
             end
         end
     --[[ text2decimal ]]
@@ -892,8 +921,8 @@
         local Lavadrop = commands 'lavadrop'
         Lavadrop.superDuperHidden = true
 
-        function Lavadrop:run()
-            if help.channelPerm('embedLinks', self.channel) then
+        function Lavadrop:run(param, perms)
+            if perms.bot:has'embedLinks' then
                 return {
                     embed = {
                         title = "__**Incorrect usage**__",
@@ -913,8 +942,8 @@
         Stats.alias = {'ping', 'uptime', 'memory'}
         Stats.help = 'shows some statistics about da bot'
 
-        function Stats:run(...)
-            local param, args = help.dashParse(...)
+        function Stats:run(param, perms)
+            local param, args = help.dashParse(param)
             local uname = uv.os_uname()
 
             local msg = self:reply('Calculating Latency....')
@@ -938,7 +967,7 @@
                     help = math.round(apiPing)..'ms'},
             }
 
-            if args.t or not help.channelPerm('embedLinks', self.channel) then
+            if args.t or not perms.bot:has'embedLinks' then
                 assert(msg:update{content = help.textEmbed("Statistics", fields)})
             else
                 assert(msg:update(help.embed("Statistics", {description = fields})))
@@ -967,12 +996,12 @@
             [3] = {'https://discord.com/stickers/','.json', help.lottie2gif}
         }
 
-        function Sticker:run(param)
+        function Sticker:run(param, perms)
             local message = help.resolveMessage(self, param, true)
             if not message then
                 return nil, 'need a valid message to steal sticker'
             end
-            if not help.channelPerm('attachFiles', self.channel) then return nil, 'i need image perms' end
+            if not perms.bot:has'attachFiles' then return nil, 'i need image perms' end
             
             local data = help.APIget(message.channel, message.id)
             local stickers = data.stickers
@@ -1012,8 +1041,8 @@
             param = true, alias = true, index = true
         }
 
-        function Help:run(...)
-            local param, args = help.dashParse(...)
+        function Help:run(param, perms)
+            local param, args = help.dashParse(param)
 
             if math.random(1,100) <= 1 then
                 return "Your BotGhost premium trial has expired! Please visit https://www.botghost.com/ for more information"
@@ -1066,7 +1095,7 @@
                 list2 = help.style.name(table.concat(rows, "\n", math.ceil(#rows / 2) + 1, #rows))
             end
 
-            if args.t or not help.channelPerm('embedLinks', self.channel) then
+            if args.t or not perms.bot:has'embedLinks' then
                 return help.textEmbed("Commands",
                     help.style.line..'\n'..
                     help.style.code(
@@ -1090,9 +1119,9 @@
         Emote.alias = {'enlarge', 'emoji', 'e', 'em', 'hugeemoji', 'hugemoji'}
         Emote.help = 'posts the image of the emoji you put in'
 
-        function Emote:run(param)
+        function Emote:run(param, perms)
             if not param then return nil, 'emoji needed' end
-            if not help.channelPerm('attachFiles', self.channel) then return nil, 'i need image perms' end
+            if not perms.bot:has'attachFiles'then return nil, 'i need image perms' end
 
             local query = param
 
@@ -1235,8 +1264,8 @@
         }
         ServerEmojis.alias = {'serverEmoji', 'server-emojis', 'server-emoji', 'server_emoji', 'server_emojis'}
 
-        function ServerEmojis:run(...)
-            local param, args = help.dashParse(...)
+        function ServerEmojis:run(param, perms)
+            local param, args = help.dashParse(param)
             param = param and param:lower()
 
             local tone = tonumber(args.t) and
@@ -1247,7 +1276,7 @@
                 help.shortcode.main[param == 'activities' and
                 'activity' or param]) or self.guild
 
-            if not help.channelPerm('embedLinks', self.channel) then return nil, 'i need embed perms' end
+            if not perms.bot:has'embedLinks' then return nil, 'i need embed perms' end
             if not guild then return nil, 'guild needed' end
 
             local obj = class.isObject(guild)
@@ -1377,8 +1406,8 @@
             e.people_hugging,
         }
 
-        function Bro:run(...)
-            local param, args = help.dashParse(...)
+        function Bro:run(param, perms)
+            local param, args = help.dashParse(param)
             local p1, p2 = help.split(param)
 
             if not p1 or not p2 then
@@ -1418,7 +1447,7 @@
 
             local icon = icons[math.ceil(n / 25)]
 
-            if args.t or not help.channelPerm('embedLinks', self.channel) then
+            if args.t or not perms.bot:has'embedLinks' then
                 return '>>> '..title..'\n'..desc..' '..icon,
                 {safe = true}
             else
@@ -1550,20 +1579,18 @@
             unknown = {nil, 0x747f8d},
         }
 
-        function User:run(param)
-            if not help.channelPerm('embedLinks', self.channel) then return nil, 'i need embed perms' end
+        function User:run(param, perms)
+            if not perms.bot:has'embedLinks' then return nil, 'i need embed perms' end
 
             local u = help.resolveUser(self, param)
-            local m = help.getMemberFromUser(u) or {}
+            local localM = self.guild and self.guild:getMember(u.id)
+            local m = (localM or help.getMemberFromUser(u)) or {}
             local a = m.activity or {}
 
             local status = statuses[a.type == 1 and
                 'streaming' or m.status or 'unknown']
             local platform = (m.mobileStatus and m.mobileStatus ~= 'offline' and
                 e.calling or e.desktop) .. ' '
-
-            local creation = date.fromSnowflake(u.id):toHeader()
-            local mention = '<@!'..u.id..'>'
 
             local type = help.getTypeOfUser(u)
 
@@ -1579,12 +1606,15 @@
                 table.insert(fields,
                 {name = 'Type', value = type, inline = true})
             end
+            if localM and m.joinedAt then
+                table.insert(fields,
+                {name = 'Server Join Date', value = date.fromISO(m.joinedAt):toHeader()})
+            end
 
             table.insert(fields, 
-            {name = 'Discord Join Date', value = creation})
+            {name = 'Discord Join Date', value = date.fromSnowflake(u.id):toHeader()})
 
             return {
-                content = mention,
                 embed = {
                     url = u.avatarURL..'?size=1024',
                     title = u.tag,
@@ -1594,6 +1624,40 @@
                 }
             }, {safe = true}
         end
+    --[[ suppress ]]
+        local Suppress = commands 'suppress' '[message]'
+        Suppress.help = 'hide/show the embeds of a message'
+        Suppress.alias = {
+            'supress',
+            'hideEmbeds', 'hide-embeds', 'hide_embeds',
+            'hideEmbed', 'hide-embed', 'hide_embed',
+            'showEmbeds', 'show-embeds', 'show_embeds',
+            'showEmbed', 'show-embed', 'show_embed',
+        }
+
+        function Suppress:run(param, perms)
+            local msg = help.resolveMessage(self, param, true)
+
+            if not msg then return nil, 'message needed' end
+            if not perms.user:has'manageMessages' then
+                return nil, 'you must have the manage messages permission'
+            end
+            if not perms.bot:has'manageMessages' then
+                return nil, 'i must have the manage messages permission'
+            end
+
+            local flag = msg:hasFlag(enum.messageFlag.suppressEmbeds)
+
+            local done = e.ballot_box_with_check
+
+            if flag then msg:showEmbeds() else msg:hideEmbeds() end
+
+            if perms.bot:has'addReactions' then
+                self:addReaction(done)
+            else
+                return done
+            end
+        end
     end--of commands 
 --[[ events ]]
     client:on('messageCreate', function(msg)
@@ -1601,42 +1665,50 @@
 
         local role = ((guild and help.getBotRole(guild)) or {})
         local botRole = role.mentionString
-        local semiMention = '@'..(msg.guild and msg.guild.me.name or bot.name)
+
+        local semiMention = '@'..(help.getNick(bot, channel))
         local semiRoleMention = botRole and '@'..(role.name)
-
-        local isCmd
-        local canSend = help.canReply(msg)
         
+        local hasCumber = msg.content:find(e.cucumber) or
+            msg.content:lower():find'c?u?%-?cumb[ae]r?'
 
-        if canSend then
-            local cmdQuery, param = help.cmdParse(msg, {
-                ';',
-                botRole,
-                bot.name,
-                semiMention,
-                semiRoleMention,
-                e.people_hugging,
-                channel.type == enum.channelType.private and '',
-            })
+        local cmdQuery, param = help.cmdParse(msg, {
+            ';',
+            botRole,
+            bot.name,
+            semiMention,
+            semiRoleMention,
+            e.people_hugging,
+            channel.type == enum.channelType.private and '',
+        })
 
-            if cmdQuery then 
+        if cucumba or cmdQuery then
+            local perms
+            local botPerm = help.perm(bot, channel)
+
+            local isCmd
+            local canSend = help.canReply(msg) and botPerm:has'sendMessages'
+
+            if hasCumber and botPerm:has'addReactions' then
+                if cucumba and botPerm:has"useExternalEmojis" then
+                    msg:addReaction(cucumba)
+                else msg:addReaction(e.cucumber) end
+            end
+
+            if canSend and cmdQuery then
+                perms = {bot = botPerm, user = help.perm(author, channel)}
                 local cmd = commands:find(cmdQuery)
                 if cmd then
                     isCmd = true
                     
-                    help.runCmd(cmd, msg, param)
+                    help.runCmd(cmd, msg, param, perms)
                 end
             end
-        end
 
-        if canSend and (not isCmd)
-        and help.cmdParse(msg, {botRole, semiMention, semiRoleMention}) == '' then
-            msg:reply("prefix is ; mention work tooooo hahahhahaha")
-        end
-
-        if msg.content:find(e.cucumber) or
-        msg.content:lower():find'c?u?%-?cumb[ae]r?' then
-            msg:addReaction(cucumba)
+            if canSend and (not isCmd)
+            and help.cmdParse(msg, {botRole, semiMention, semiRoleMention}) == '' then
+                msg:reply("prefix is ; mention work tooooo hahahhahaha")
+            end
         end
     end)
 
