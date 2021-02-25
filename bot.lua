@@ -1,15 +1,20 @@
 --[[ variables ]]
     local discordia = require('discordia')
-    local client = discordia.Client{cacheAllMembers = true, logFile = '',}
-    local time = discordia.Time()
-    local date = discordia.Date()
+    local client = discordia.Client{cacheAllMembers = true, logFile = '', logLevel = 0}
+    local time = discordia.Time
+    local date = discordia.Date
+    local class = discordia.class
+    local classes = class.classes
     local color = discordia.Color
     local API = client._api
     local enum = discordia.enums
+    local logger = discordia.Logger(enum.logLevel.debug, '%F %T', '')
+    local log = function(...)
+        logger:log(...)
+    end
+        
 
     local requireDiscordia = require('require')(select(2, module:resolve('discordia')))
-    local class = discordia.class
-    local classes = class.classes
     local resolver = requireDiscordia('client/Resolver')
     
     discordia.extensions()
@@ -50,9 +55,10 @@
         client = client, uv = uv, date = date, enum = enum, 
         discordia = discordia, classes = classes, len = len,
         defaultColor = defaultColor, require = require,
+        logger = logger, log = log,
         games = games,} variables.variables = variables 
 
-    local bot, prefixes, cucumba, appInfo, help, commands, apiPing, e
+    local bot, prefixes, custom, appInfo, help, commands, apiPing, e
     client:once('ready', function()
         bot = client.user
         prefixes = {
@@ -60,10 +66,22 @@
             '<@!%s>'%{bot.id},
         }
         apiPing = 0/0
-        cucumba = client:getEmoji'767783439097135144'
+        custom = {}
+        config.discord.emoji_server_id = config.discord.emoji_server_id:match'^"(.-)"$'
+        local emojiServer = client:getGuild(config.discord.emoji_server_id)
+        if emojiServer then
+            for i, e in pairs(emojiServer.emojis) do
+                custom[e.name] = e
+            end
+        end
         appInfo = client:getApplicationInformation()
-        variables.cucumba = cucumba; variables.bot = bot; variables.apiPing = apiPing
+        variables.custom = custom; variables.bot = bot; variables.apiPing = apiPing
         variables.prefixes = prefixes; variables.appInfo = appInfo
+
+        log(enum.logLevel.info,
+            "Successfully started with %s users in %s servers.",
+            table.count(client._users), table.count(client.guilds)
+        )
 
         timer.setInterval(10000, function()
             coroutine.wrap(client.setGame)(client, games[math.random(#games)])
@@ -394,40 +412,30 @@
         end
     --[[ searchMembers ]]
         function help.searchMembers(guild, query, threshold)
-            local username, discrim = query:match("^@?(.-)#(%d%d%d%d)$")
-            username = username or query:match("^@?(.*)$")
-
-            query = username:lower()
+            query = query:lower()
 
             local n = 0
             local member, value
             for i, m in pairs(help.getAllMembers(guild)) do
-                if not discrim then
-                    local s1, s2 = m.name:lower(), m.user.name:lower()
+                local s1, s2 = m.name:lower(), m.user.name:lower()
 
-                    local i1, j1 = s1:find(query, 1, true)
-                    local i2, j2 = s2:find(query, 1, true)
-                    
-                    local c1 = i1 and ((j1 - (i1 - 1)) / #s1)
-                    local c2 = i2 and ((j2 - (i2 - 1)) / #s2)
+                local i1, j1 = s1:find(query, 1, true)
+                local i2, j2 = s2:find(query, 1, true)
+                
+                local c1 = i1 and ((j1 - (i1 - 1)) / #s1)
+                local c2 = i2 and ((j2 - (i2 - 1)) / #s2)
 
-                    local c = (c1 and c2 and math.min(c1, c2)) or
-                        c1 or c2
+                local c = (c1 and c2 and math.min(c1, c2)) or
+                    c1 or c2
 
-                    if c then
-                        if (not value) or value < c then
+                if c then
+                    if (not value) or value < c then
+                        member, value, n = m, c, n + 1
+                    elseif value == c then
+                        if date.fromISO(member.joinedAt):toSeconds()
+                        < date.fromISO(m.joinedAt):toSeconds() then
                             member, value, n = m, c, n + 1
-                        elseif value == c then
-                            if date.fromISO(member.joinedAt):toSeconds()
-                            < date.fromISO(m.joinedAt):toSeconds() then
-                                member, value, n = m, c, n + 1
-                            end
                         end
-                    end
-                else
-                    if (m.user.name:lower() == query) and
-                    (tostring(m.user.discriminator) == discrim) then
-                        return m
                     end
                 end
             end
@@ -458,8 +466,17 @@
                 ret = client:getUser(param)
             elseif param then
                 local mat = param:match("<@!?(%d+)>")
+                local name, discrim = param:match("^@?([^#]+)#(%d%d%d%d)$")
                 if mat then ret = client:getUser(mat)
-                elseif param:lower() == 'me' then ret = client:getUser(msg.author)
+                elseif name then
+                    name = name:lower()
+                    for i, u in pairs(client._users) do
+                        if (u.name:lower() == name) and
+                        (tostring(u.discriminator) == discrim) then
+                            ret = u
+                        end
+                    end
+                elseif param:lower() == 'me' then ret = msg.author
                 elseif msg.guild then
                     if param:lower() == 'random' then
                         return help.getAllMembers(msg.guild):random()
@@ -491,18 +508,18 @@
                 return client:getWebhook(user.id)
             end
         end
+    --[[ userFlag ]]
+        function help.userFlag(user, flag)
+            return bit.band(user._public_flags or 0, bit.lshift(1, flag)) > 0
+        end
     --[[ getTypeOfUser ]]
-        local systemAccounts = {
-            ['669627189624307712'] = true
-        }    
-
         function help.getTypeOfUser(user)
-            if systemAccounts[user.id] then
+            if user._system then
                 return "System"
             end
             local w = help.getWebhookFromUser(user)
             if w then
-                if systemAccounts[w.user and w.user.id] then
+                if w.user and w.user._system then
                     return "System"
                 end
                 if w.type == 2 then
@@ -512,9 +529,12 @@
                 end
             elseif user.bot and user.discriminator == '0000' then
                 return 'Webhook'
+            elseif user.bot and help.userFlag(user, 16) then
+                return "Verified Bot"
             elseif user.bot then
                 return "Bot"
             end
+            return 'User'
         end
     --[[ alphasort ]]
         function help.alphasort(a, b)
@@ -527,10 +547,10 @@
         function help.apng2gif(apngSource)
             local tmp = os.tmpname()
             fs.writeFileSync(tmp, apngSource)
-            spawn(config.paths.apng2gif, {args = {
+            assert(spawn(config.paths.apng2gif, {args = {
                 tmp,
                 tmp,
-            }}).waitExit()
+            }})).waitExit()
             local gifSource = fs.readFileSync(tmp)
             fs.unlink(tmp)
             return gifSource
@@ -559,12 +579,12 @@
             local tmp = os.tmpname()
             local out = tmp..'.gif'
             fs.writeFileSync(tmp, jsonSource)
-            spawn(config.paths.puppeteer_lottie,{args = {
+            assert(spawn(config.paths.puppeteer_lottie,{args = {
                 '-i', tmp,
                 '-o', out,
                 '-w', tostring(math.clamp(w or 160, 10, 1024)),
                 '-h', tostring(math.clamp(w or 160, 10, 1024))
-            }}).waitExit()
+            }})).waitExit()
             local gifSource = fs.readFileSync(out)
             fs.unlink(tmp)
             fs.unlink(out)
@@ -1475,7 +1495,9 @@
         Avatar.alias = {'avater', 'pfp', 'profilePicture', 'profile-picture', 'profile_picture', 'icon'}
         Avatar.flags = {
             {'default',
-            'shows default avatar'}
+            'shows default avatar'},
+            {'size',
+            'changes image size (16 - 4096)', 'NUMBER'}
         }
 
         function Avatar:run(...)
@@ -1483,10 +1505,16 @@
 
             local user = help.resolveUser(self, param)
 
+            local size = tonumber(args.s) and 
+                math.clamp(
+                    math.pow(2, math.ceil(math.log(args.s)/math.log(2))),
+                    16, 4096
+                ) or 1024
+
             return (args.d and 
-                user.defaultAvatarURL or
-                user.avatarURL)
-                ..'?size=1024 _ _',
+                user:getDefaultAvatarURL(size) or
+                user:getAvatarURL(size))
+                ..' _ _',
                 {safe = true}
         end
     --[[ blue ]]
@@ -1589,6 +1617,21 @@
             unknown = {nil, 0x747f8d},
         }
 
+        local badges = {
+            {'staff_badge', 0},
+            {'partner_badge',1},
+            {'hypesquad_badge',2},
+            {'bravery_badge',6},
+            {'brilliance_badge',7},
+            {'balance_badge',8},
+            {'bug_hunter_badge',3},
+            {'bug_hunter_badge_2',14},
+            {'verified_developer_badge',17},
+            {'early_supporter_badge',9},
+        }
+
+        local boost = {0.5,2,3,6,9,12,15,18,24}
+
         function User:run(param, perms)
             if not perms.bot:has'embedLinks' then return nil, 'i need embed perms' end
 
@@ -1612,17 +1655,57 @@
                 table.insert(fields,
                 {name = 'Status', value = platform..status[1], inline = true})
             end
-            if type then
+            if type ~= 'User' then
                 table.insert(fields,
                 {name = 'Type', value = type, inline = true})
             end
-            if localM and m.joinedAt then
+            if localM then
                 if m.nickname then
                     table.insert(fields,
                     {name = 'Nickname', value = m.nickname, inline = true})
                 end
-                table.insert(fields,
-                {name = 'Server Join Date', value = date.fromISO(m.joinedAt):toHeader()})
+            end
+
+            if perms.bot:has'useExternalEmojis' then
+                local out = {}
+                for i, b in pairs(badges) do
+                    if custom[b[1]] and help.userFlag(u, b[2]) then
+                        table.insert(out, custom[b[1]].mentionString)
+                    end
+                end
+                if localM and m.premiumSince then
+                    local months = math.ceil(
+                        (date():toSeconds() - date.fromISO(m.premiumSince):toSeconds())
+                        / 2.628e+6
+                    )
+
+                    for i, m in pairs(boost) do
+                        if months <= m then
+                            local exists = boost[i-1] and custom['boosting_icons_'..math.ceil(boost[i-1])]
+                            if exists then
+                                table.insert(out, exists.mentionString)
+                            end
+                            break
+                        end
+                    end
+                end
+
+                out = table.concat(out, ' ')
+                if #out > 0 then
+                    table.insert(fields,
+                    {name = 'Badges', value = out, inline = true})
+                end
+            end
+
+            if localM then
+                if m.premiumSince then
+                    table.insert(fields,
+                    {name = 'Boosting Since', value = date.fromISO(m.premiumSince):toHeader()})
+                end
+                if m.joinedAt then
+                    table.insert(fields,
+                    {name = 'Server Join Date', value = date.fromISO(m.joinedAt):toHeader()})
+                end
             end
 
             table.insert(fields, 
@@ -1716,8 +1799,8 @@
             local canSend = help.canReply(msg) and botPerm:has'sendMessages'
 
             if hasCumber and botPerm:has'addReactions' then
-                if cucumba and botPerm:has"useExternalEmojis" then
-                    msg:addReaction(cucumba)
+                if custom.cucumba and botPerm:has"useExternalEmojis" then
+                    msg:addReaction(custom.cucumba)
                 else msg:addReaction(e.cucumber) end
             end
 
@@ -1770,6 +1853,14 @@
 
     client:on('commandTriggered', function(interaction)
         interaction:reply(5)
+    end)
+
+    client:on('info', function(message)
+        log(enum.logLevel.info, message)
+    end)
+
+    client:on('error', function(message)
+        log(enum.logLevel.error, message)
     end)
 
     client:run((config.discord.bot and 'Bot ' or '') .. config.discord.token) 

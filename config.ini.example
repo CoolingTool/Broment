@@ -2,6 +2,10 @@
 bot=true
 token=
 
+; server where all emojis are stored (emoji images are in misc/emojis)
+; put inside ""
+emoji_server_id=""
+
 [paths]
 ; The path for apng2gif used for help.apng2gif 
 apng2gif=misc\apng2gif.exe
