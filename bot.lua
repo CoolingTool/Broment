@@ -8,7 +8,7 @@
     local enum = discordia.enums
 
     local requireDiscordia = require('require')(select(2, module:resolve('discordia')))
-    local class = requireDiscordia('class')
+    local class = discordia.class
     local classes = class.classes
     local resolver = requireDiscordia('client/Resolver')
     
@@ -36,6 +36,12 @@
         config.paths[i] = path.resolve(new)
     end
 
+    local games = {}
+
+    for g in io.lines('misc/games.txt') do
+        table.insert(games, g)
+    end
+
     local variables = { -- update when new variable added -- }
         requireDiscordia = requireDiscordia, module = module,
         resolver = resolver, time = time, class = class, 
@@ -43,8 +49,8 @@
         fs = fs, http = http, url = url, API = API, pp = pp,
         client = client, uv = uv, date = date, enum = enum, 
         discordia = discordia, classes = classes, len = len,
-        defaultColor = defaultColor, require = require,}
-        variables.variables = variables 
+        defaultColor = defaultColor, require = require,
+        games = games,} variables.variables = variables 
 
     local bot, prefixes, cucumba, appInfo, help, commands, apiPing, e
     client:once('ready', function()
@@ -58,6 +64,10 @@
         appInfo = client:getApplicationInformation()
         variables.cucumba = cucumba; variables.bot = bot; variables.apiPing = apiPing
         variables.prefixes = prefixes; variables.appInfo = appInfo
+
+        timer.setInterval(10000, function()
+            coroutine.wrap(client.setGame)(client, games[math.random(#games)])
+        end)
     end)
 --[[ functions ]]
     help = {} do
@@ -530,7 +540,7 @@
             local tmp = os.tmpname()
             local out = tmp..'.png'
             fs.writeFileSync(tmp, svgSource)
-            spawn(config.paths.inkscape, {args = {
+            assert(spawn(config.paths.inkscape, {args = {
                 '-w',
                 tostring(math.clamp(w or 1024, 10, 1024)),
                 '-h',
@@ -538,7 +548,7 @@
                 tmp,
                 '--export-filename',
                 out, 
-            }}).waitExit()
+            }})).waitExit()
             local pngSource = fs.readFileSync(out)
             fs.unlink(tmp)
             fs.unlink(out)
@@ -1462,7 +1472,7 @@
     --[[ avatar ]]
         local Avatar = commands 'avatar' '[user]*'
         Avatar.help = 'fetches users avatar link for you'
-        Avatar.alias = {'pfp', 'profilePicture', 'profile-picture', 'profile_picture', 'icon'}
+        Avatar.alias = {'avater', 'pfp', 'profilePicture', 'profile-picture', 'profile_picture', 'icon'}
         Avatar.flags = {
             {'default',
             'shows default avatar'}
@@ -1562,8 +1572,8 @@
         function Invite:run()
             return
             "<https://discord.com/api/oauth2/authorize?client_id="..
-                client:getApplicationInformation().id..
-                "&permissions=2147483639&scope=bot>"
+                appInfo.id..
+                "&permissions=2147483639&scope=applications.commands%20bot>"
         end
     --[[ user ]]
         local User = commands 'user' '[user]*'
@@ -1583,7 +1593,7 @@
             if not perms.bot:has'embedLinks' then return nil, 'i need embed perms' end
 
             local u = help.resolveUser(self, param)
-            local localM = self.guild and self.guild:getMember(u.id)
+            local localM = self.guild and self.guild._members:get(u.id)
             local m = (localM or help.getMemberFromUser(u)) or {}
             local a = m.activity or {}
 
@@ -1607,12 +1617,27 @@
                 {name = 'Type', value = type, inline = true})
             end
             if localM and m.joinedAt then
+                if m.nickname then
+                    table.insert(fields,
+                    {name = 'Nickname', value = m.nickname, inline = true})
+                end
                 table.insert(fields,
                 {name = 'Server Join Date', value = date.fromISO(m.joinedAt):toHeader()})
             end
 
             table.insert(fields, 
             {name = 'Discord Join Date', value = date.fromSnowflake(u.id):toHeader()})
+
+            local footer
+            if a and a.name == 'Custom Status' then
+                footer = {text = utf8.char(0x200B)}
+                if a.emojiHash then
+                    footer.icon_url = a.emojiURL or help.twemoji(a.emojiHash)
+                end
+                if a.state then
+                    footer.text = footer.text .. a.state
+                end
+            end
 
             return {
                 embed = {
@@ -1621,6 +1646,7 @@
                     thumbnail = {url = u.avatarURL},
                     fields = fields,
                     color = status[2],
+                    footer = footer
                 }
             }, {safe = true}
         end
@@ -1723,6 +1749,27 @@
     client:on('heartbeat', function(_, ping)
         apiPing = ping
         variables.apiPing = apiPing
+    end)
+
+    function client._events.INTERACTION_CREATE(d, client)
+        if d.type == 2 then
+            function d:reply(responseType, data)
+                local endpoint = "/interactions/"..self.id.."/"..self.token.."/callback"
+
+                if type(data) == 'string' then data = {content = data} end
+
+                return API:request('POST', endpoint, {
+                    type = responseType,
+                    data = data
+                })
+            end
+
+            return client:emit('commandTriggered', d)
+        end
+    end
+
+    client:on('commandTriggered', function(interaction)
+        interaction:reply(5)
     end)
 
     client:run((config.discord.bot and 'Bot ' or '') .. config.discord.token) 
