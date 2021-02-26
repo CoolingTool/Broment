@@ -3,7 +3,7 @@ bot=true
 token=
 
 ; server where all emojis are stored (emoji images are in misc/emojis)
-; put inside ""
+; put id inside ""
 emoji_server_id=""
 
 [paths]

@@ -320,29 +320,6 @@
                 error(body)
             end
         end
-    --[[ channelPerm ]]
-
-        help.channelPerm = {}
-
-        --https://github.com/SinisterRectus/Discordia/wiki/Enumerations#permission
-
-        help.channelPerm.dm = {
-            addReactions = true, readMessages = true, sendMessages = true,
-            embedLinks = true, attachFiles = true, readMessageHistory = true,
-            useExternalEmojis = true, 
-        }
-
-        local function _(self, perm, channel, member)
-            if channel.guild then
-                local guild = channel.guild 
-                local member = guild:getMember(resolver.userId(member or guild.me))
-                return member and member:hasPermission(channel, enum.permission[perm])
-            else
-                return self.dm[perm]
-            end
-        end
-
-        setmetatable(help.channelPerm,{__call = _})
     --[[ perms ]]
         help.perm = {}
 
@@ -527,10 +504,10 @@
                 else
                     return "Webhook"
                 end
-            elseif user.bot and user.discriminator == '0000' then
-                return 'Webhook'
             elseif user.bot and help.userFlag(user, 16) then
                 return "Verified Bot"
+            elseif user.bot and user.discriminator == '0000' then
+                return 'Webhook'
             elseif user.bot then
                 return "Bot"
             end
@@ -1440,8 +1417,11 @@
             local param, args = help.dashParse(param)
             local p1, p2 = help.split(param)
 
-            if not p1 or not p2 then
-                return nil, '`[p1]; [p2]` expected'
+            if (not p1) then p1 = self.author.id end
+            if (not p2) and self.guild then p2 = 'random' end 
+
+            if not p2 then
+                return nil, '`[p2]` expected'
             end
 
             p1 = help.resolveUser(self, p1, true, .75) or p1
@@ -1632,6 +1612,24 @@
 
         local boost = {0.5,2,3,6,9,12,15,18,24}
 
+        local old = classes.User.getAvatarURL
+        function classes.User:getAvatarURL(size, ext)
+            if self._avatar_url then
+                return self._avatar_url
+            else
+                return old(self, size, ext)
+            end
+        end
+
+        client._users:_insert({
+            id = "1",
+            username = "Clyde",
+            discriminator = "0000",
+            avatar_url = "https://discord.com/assets/f78426a064bc9dd24847519259bc42af.png",
+            bot = true,
+            public_flags = bit.lshift(1, 16),
+        })
+
         function User:run(param, perms)
             if not perms.bot:has'embedLinks' then return nil, 'i need embed perms' end
 
@@ -1767,6 +1765,36 @@
                 return done
             end
         end
+    --[[ Base64image ]]
+        local Base64image = commands 'base64ToImage' '[base64]'
+        Base64image.help = 'turn a base64 image to its original form'
+        Base64image.alias = {'base64img', 'b64image', 'b64img'}
+
+        function Base64image:run(param, perms)
+            if not perms.bot:has'attachFiles' then 
+                return nil, 'need image perms'
+            end
+            
+            local url = self.attachment and self.attachment.url:find(".txt$") and self.attachment.url  
+            if url then
+                local succ, res, source = pcall(http.request, "GET", url, nil, nil, 10000)
+                assert(succ, res)
+
+                param = source
+            end
+
+            if not param then return nil, 'base64 expected' end
+
+            local ext, data = param:match"^data:image/(%a+);base64,([%w%//%+%=]+)$"
+
+            if ext then 
+                return {
+                    file = {table.concat({self.id,ext},'.'),require "openssl".base64(data,false)}
+                }
+            else
+                return nil, '`data:image/{ext};base64,{base64}}` expected'
+            end
+        end
     end--of commands 
 --[[ events ]]
     client:on('messageCreate', function(msg)
@@ -1791,7 +1819,7 @@
             channel.type == enum.channelType.private and '',
         })
 
-        if cucumba or cmdQuery then
+        if hasCumber or cmdQuery then
             local perms
             local botPerm = help.perm(bot, channel)
 
