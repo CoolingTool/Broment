@@ -1070,7 +1070,7 @@
                 return done
             end
         end
-    --[[ Base64image ]]
+    --[[ base64image ]]
         local Base64image = commands 'base64ToImage' '[base64]'
         Base64image.help = 'turn a base64 image to its original form'
         Base64image.alias = {'base64img', 'b64image', 'b64img'}
