@@ -105,7 +105,7 @@ function user:run(param, perms)
         out = table.concat(out, ' ')
         if #out > 0 then
             table.insert(fields,
-            {name = 'Badges', value = out, inline = true})
+            {name = 'Badges', value = out..utf8.char(0x200B), inline = true})
         end
     end
 
