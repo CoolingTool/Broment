@@ -10,7 +10,7 @@ local dialog = {
     "pe", "po", "pa",
     "bep", "bop", "bap",
     "beep", "boop", "baap",
-    "skde", "skdo", "skda",
+    "ske", "sko", "ska",
 }
 
 function boyfriend:run(param)
