@@ -68,7 +68,7 @@
 1001 Spikes
 1080° Avalanche
 1080° Snowboarding
-1942 (game)
+1942
 1943: The Battle of Midway
 1950s Lawn Mower Kids
 1999: Hore, Mita Koto Ka! Seikimatsu
@@ -260,7 +260,7 @@ Another Code: R – A Journey into Lost Memories
 Another Code: Two Memories
 Another Lost Phone: Laura's Story
 Another Sight
-Anticipation (video game)
+Anticipation
 Anubis II
 AO Tennis 2
 Ape Out
@@ -281,7 +281,7 @@ Arcade Classic 3: Galaga + Galaxian
 Arcade Classic 4: Defender + Joust
 Archon
 Arctic Tale
-Are You Smarter than a 5th Grader? (video game)
+Are You Smarter than a 5th Grader?
 Arena of Valor
 Aretha
 ARK: Survival Evolved
@@ -354,7 +354,7 @@ Atelier Rorona Plus: The Alchemist of Arland
 Atelier Rorona: The Alchemist of Arland DX
 Atelier Ryza: Ever Darkness & the Secret Hideout
 Atelier Totori: The Adventurer of Arland DX
-Athena (game)
+Athena
 Athletic World
 Atomic Betty
 Atomic Punk
@@ -468,7 +468,7 @@ Bass Rush: ECOGEAR PowerWorm Championship
 Bastion
 Baten Kaitos Origins
 Baten Kaitos: Eternal Wings and the Lost Ocean
-Batman (video game)
+Batman
 Batman Beyond: Return of the Joker
 Batman Forever
 Batman Returns
@@ -652,7 +652,7 @@ Bomberman 64: The Second Attack
 Bomberman '93
 Bomberman '94
 Bomberman (DS)
-Bomberman (video game)
+Bomberman
 Bomberman B-Daman
 Bomberman Blast
 Bomberman Blitz
@@ -858,7 +858,7 @@ Carmen Sandiego Adventures in Math: The Lady Liberty Larceny
 Carnival Games
 Carnival Games Mini Golf
 Carnival Games: Wild West 3D
-Carrion (game)
+Carrion
 Cars
 Cars 2: The Video Game
 Cars 3: Driven to Win
@@ -907,7 +907,7 @@ Cave Story +
 Caveblazers
 Cel Damage
 Celebrity Sports Showdown
-Celeste (game)
+Celeste
 Centipede: Infestation
 Centre Court Tennis
 Chameleon: To Dye For!
@@ -983,7 +983,7 @@ Classic Word Games
 ClayFighter
 ClayFighter 63⅓
 Climber
-Clock Tower (video game)
+Clock Tower
 ClockWerx
 Cloudberry Kingdom
 Clu Clu Land
@@ -1053,7 +1053,7 @@ Cooking Mama: Cookstar
 Cooking Mama: Sweet Shop
 Cooking Mama: World Kitchen
 Cool Spot
-Coraline (video game)
+Coraline
 Corpse Party
 Corvette Evolution GT
 Cory in the House
@@ -1314,7 +1314,7 @@ Disney's Magical Mirror Starring Mickey Mouse
 Disney's Magical Quest starring Mickey and Minnie Mouse
 Disney's Party
 Disney's Peter Pan: Return to Never Land
-Disney's Pinocchio (video game)
+Disney's Pinocchio
 Disney's Switch Jam
 Disney's Tarzan
 Disney's Tarzan Return to the Jungle
@@ -1359,7 +1359,7 @@ Donkey Kong 3-e
 Donkey Kong 64
 Donkey Kong (Game & Watch)
 Donkey Kong (Game Boy)
-Donkey Kong (video game)
+Donkey Kong
 Donkey Kong Barrel Blast
 Donkey Kong Circus
 Donkey Kong Classics
@@ -1372,7 +1372,7 @@ Donkey Kong Country: Tropical Freeze
 Donkey Kong Hockey
 Donkey Kong II
 Donkey Kong Jr. (Game & Watch)
-Donkey Kong Jr. (video game)
+Donkey Kong Jr.
 Donkey Kong Jr. Math
 Donkey Kong Jr.-e
 Donkey Kong Jungle Beat
@@ -1431,7 +1431,7 @@ Dr. Kawashima's Brain Training for Nintendo Switch
 Dr. Luigi
 Dr. Mario 64
 Dr. Mario & Puzzle League
-Dr. Mario (video game)
+Dr. Mario
 Dr. Mario Express
 Dr. Mario Online Rx
 Dr. Mario World
@@ -1573,7 +1573,7 @@ EarthBound Beginnings
 EarthNight
 Earthworm Jim 2
 Earthworm Jim 3D
-Earthworm Jim (video game)
+Earthworm Jim
 Ecco Jr.
 Ecco the Dolphin
 Ecco: The Tides of Time
@@ -1785,7 +1785,7 @@ Fight of Gods
 Fighting Street
 FILA Decathlon
 Fimbul
-Final Fantasy (video game)
+Final Fantasy
 Final Fantasy Adventure
 Final Fantasy Crystal Chronicles
 Final Fantasy Crystal Chronicles: Echoes of Time
@@ -1832,7 +1832,7 @@ Fire 'n Ice
 Fire Attack
 Fire Bam
 Fire Breathers
-Fire Emblem (video game)
+Fire Emblem
 Fire Emblem Awakening
 Fire Emblem Echoes: Shadows of Valentia
 Fire Emblem Fates
@@ -1857,7 +1857,7 @@ Fishing Master World Tour
 Fishing Resort
 Fishing Star World Tour
 Fishing Universe Simulator
-Fist of the North Star (video game)
+Fist of the North Star
 Fist of the North Star: Ken's Rage 2
 Fitness Boxing
 Five Nights at Freddy's
@@ -1887,10 +1887,10 @@ Food Network: Cook or Be Cooked!
 Football Heroes Turbo
 Football International
 For the Frog the Bell Tolls
-Forager (video game)
+Forager
 Ford Racing 3
 Forecast Channel
-Forever Forest (video game)
+Forever Forest
 Fortnite
 Fortune Street
 Fossil Fighters
@@ -2040,7 +2040,7 @@ Glory of Heracles III: Silence of the Gods
 Glory of Heracles IV: Gift from the Gods
 Glory of Heracles: Legend of the Fighting Demon's Lair
 Glory of Heracles: The Gods Began to Move
-Glover (video game)
+Glover
 Go Play City Sports
 Go Vacation
 Go! Princess PreCure Sugar Ōkoku to 6-nin no Princess!
@@ -2069,7 +2069,7 @@ Golden Sun: The Lost Age
 GoldenEye 007
 GoldenEye 007 (2010)
 GoldenEye: Rogue Agent
-Golf (video game)
+Golf
 Golf (Virtual Boy)
 Golf Story
 Golf-e
@@ -2289,7 +2289,7 @@ How to Train Your Dragon 2
 Hugo 2 1/2
 Hugo 2
 Hugo 2in1: Bukkazoom! / The Evil Mirror
-Hugo (video game)
+Hugo
 Hugo Bukkazoom!
 Hugo: Black Diamond Fever
 Hugo: Magic In The Troll Woods
@@ -2395,7 +2395,7 @@ Iridion 3D
 Iron Chef America: Supreme Cuisine
 Iron Feather
 Iron Man 2
-Iron Man (video game)
+Iron Man
 Iron Tank
 IronFall: Invasion
 Island Days
@@ -2499,7 +2499,7 @@ Just Dance 2017
 Just Dance 2018
 Just Dance 2019
 Just Dance 2020
-Just Dance (game)
+Just Dance
 Just Dance Kids 2014
 Just Dance Wii
 Just Dance Wii 2
@@ -2620,7 +2620,7 @@ Kirby: Nightmare in Dream Land
 Kirby: Planet Robobot
 Kirby: Triple Deluxe
 Klonoa 2: Dream Champ Tournament
-Klonoa (game)
+Klonoa
 Klonoa: Empire of Dreams
 Knight Move
 Knights in the Nightmare
@@ -2658,7 +2658,7 @@ L.A. Noire
 Labyrinth of Refrain: Coven of Dusk
 Lalaloopsy: Carnival of Friends
 Landstalker
-Langrisser (video game)
+Langrisser
 Langrisser II
 Langrisser Re:Incarnation Tensei
 Laser Clay Shooting System
@@ -2792,7 +2792,7 @@ Lufia & the Fortress of Doom
 Lufia: Curse of the Sinistrals
 Lufia: The Legend Returns
 Luigi's Mansion 3
-Luigi's Mansion (video game)
+Luigi's Mansion
 Luigi's Mansion Arcade
 Luigi's Mansion: Dark Moon
 Lumines Remastered
@@ -2806,7 +2806,7 @@ Luxor 3
 M&M's Kart Racing
 Maboshi's Arcade
 Mace: The Dark Age
-Mach Rider (video game)
+Mach Rider
 Mad Max
 Madagascar
 Madagascar 3: The Video Game
@@ -3021,7 +3021,7 @@ Mega Man 10
 Mega Man 11
 Mega Man 64
 Mega Man & Bass
-Mega Man (video game)
+Mega Man
 Mega Man Anniversary Collection
 Mega Man Battle Chip Challenge
 Mega Man Battle Network 2
@@ -3029,7 +3029,7 @@ Mega Man Battle Network 3
 Mega Man Battle Network 4
 Mega Man Battle Network 5
 Mega Man Battle Network 6
-Mega Man Battle Network (video game)
+Mega Man Battle Network
 Mega Man II
 Mega Man III
 Mega Man IV
@@ -3045,7 +3045,7 @@ Mega Man Star Force 3
 Mega Man V
 Mega Man X2
 Mega Man X3
-Mega Man X (video game)
+Mega Man X
 Mega Man X Collection
 Mega Man X Legacy Collection
 Mega Man X Legacy Collection 1 + 2
@@ -3103,7 +3103,7 @@ Meteos
 Meteos: Disney Magic
 Metro Redux
 Metro: Last Light
-Metroid (video game)
+Metroid
 Metroid Fusion
 Metroid II: Return of Samus
 Metroid Prime
@@ -3212,7 +3212,7 @@ Monsters vs. Aliens
 Monsters, Inc.
 Monsters, Inc. / Finding Nemo
 Monsters, Inc. Scream Arena
-Moon (DS game)
+Moon
 Moon Chronicles
 Moonlighter
 Morita Shogi 64
@@ -3248,7 +3248,7 @@ Mr. Driller: Drill Spirits
 Mr. Goemon
 Mr. Shifty
 MRC: Multi-Racing Championship
-Ms. Pac-Man (video game)
+Ms. Pac-Man
 Ms. Pac-Man Maze Madness
 Muramasa: The Demon Blade
 MUSHA
@@ -3629,7 +3629,7 @@ Pac-In-Time
 Pac-Land
 Pac-Man 2: The New Adventures
 Pac-Man & Galaga Dimensions
-Pac-Man (video game)
+Pac-Man
 Pac-Man and the Ghostly Adventures
 Pac-Man and the Ghostly Adventures 2
 Pac-Man Championship Edition 2 Plus
@@ -3651,7 +3651,7 @@ Pajama Sam: Don't Fear The Dark
 Paladin's Quest
 Paladins
 Pandora's Tower
-Panel de Pon (video game)
+Panel de Pon
 Panic Bomber
 Pantsu Hunter: Back to the 90s
 Panzer Dragoon: Remake
@@ -3723,7 +3723,7 @@ Pferd & Pony: Best Friends: Mein Pferd
 Pferd & Pony: Mein Pferdehof
 PGA Tour 2K21
 PGA Tour 96
-Phantasy Star (video game)
+Phantasy Star
 Phantasy Star II
 Phantasy Star III: Generations of Doom
 Phantasy Star IV: The End of the Millennium
@@ -3769,7 +3769,7 @@ Pikmin 2
 Pikmin 2-e
 Pikmin 3
 Pikmin 3 Deluxe
-Pikmin (video game)
+Pikmin
 Pikuniku
 Pilotwings
 Pilotwings 64
@@ -3889,7 +3889,7 @@ Pokémon Stadium 2
 Pokémon Sun and Moon
 Pokémon Super Mystery Dungeon
 Pokémon Sword and Shield
-Pokémon Trading Card Game (video game)
+Pokémon Trading Card Game
 Pokémon Trozei!
 Pokémon Ultra Sun and Ultra Moon
 Pokémon Unite
@@ -3997,8 +3997,8 @@ Puyo Pop
 Puyo Pop Fever
 Puyo Puyo 2
 Puyo Puyo 7
-Puyo Puyo (1991 video game)
-Puyo Puyo (1992 video game)
+Puyo Puyo
+Puyo Puyo
 Puyo Puyo Sun
 Puyo Puyo Tetris
 Puyo Puyo ~n
@@ -4074,7 +4074,7 @@ Rayman 2: The Great Escape
 Rayman 3: Hoodlum Havoc
 Rayman 3D
 Rayman 10th Anniversary
-Rayman (video game)
+Rayman
 Rayman Advance
 Rayman DS
 Rayman Legends
@@ -4123,7 +4123,7 @@ Resident Evil 4: Wii Edition
 Resident Evil 5
 Resident Evil 6
 Resident Evil 7: Cloud Version
-Resident Evil (video game)
+Resident Evil
 Resident Evil Code: Veronica X
 Resident Evil Gaiden
 Resident Evil Origins Collection
@@ -4327,12 +4327,12 @@ Sexy Poker
 SF-HiSplitter
 Shadow Dancer: The Secret of Shinobi
 Shadow of the Ninja
-Shadow the Hedgehog (video game)
+Shadow the Hedgehog
 Shadowgate
 Shadowgate 64: Trials of the Four Towers
 Shadowrun
 Shaman King: Soaring Hawk
-Shantae (video game)
+Shantae
 Shantae and the Pirate's Curse
 Shantae and the Seven Sirens
 Shantae: Half-Genie Hero
@@ -4514,7 +4514,7 @@ Sonic the Hedgehog 2 (8-bit)
 Sonic the Hedgehog 3
 Sonic the Hedgehog 4: Episode 1
 Sonic the Hedgehog (8-bit)
-Sonic the Hedgehog (video game)
+Sonic the Hedgehog
 Sonic the Hedgehog: Genesis
 Sonic the Hedgehog: Triple Trouble
 Sonic Unleashed
@@ -5047,7 +5047,7 @@ The Haunted Mansion
 The Hidden
 The Hip Hop Dance Experience
 The History Channel: Battle for the Pacific
-The Hobbit (2003 video game)
+The Hobbit
 The House of the Dead 2 & 3 Return
 The House of the Dead: Overkill
 The Hunchback of Notre Dame
@@ -5118,7 +5118,7 @@ The Legend of Zelda: The Wind Waker + Metroid Prime
 The Legend of Zelda: Tri Force Heroes
 The Legend of Zelda: Twilight Princess
 The Legend of Zelda: Twilight Princess HD
-The Legendary Starfy (video game)
+The Legendary Starfy
 The Lego Movie 2 Videogame
 The Lego Movie Videogame
 The LEGO Ninjago Movie Videogame
@@ -5166,7 +5166,7 @@ The Powerpuff Girls: Mojo Jojo A-Go-Go
 The Powerpuff Girls: Paint the Townsville Green
 The Powerpuff Girls: Relish Rampage
 The Price is Right 2010 Edition
-The Price is Right (video game)
+The Price is Right
 The Price is Right Decades
 The Princess Guide
 The Quest Trio
@@ -5198,7 +5198,7 @@ The Sims 2: Apartment Pets
 The Sims 2: Castaway
 The Sims 2: Pets
 The Sims 3
-The Sims (video game)
+The Sims
 The Sims Bustin' Out
 The Sky Crawlers: Innocent Aces
 The Smurfs 2
@@ -5341,7 +5341,7 @@ Top Rank Tennis
 Top Trumps: Doctor Who
 Top Trumps: NBA All Stars
 Torchlight II
-Tornado (video game)
+Tornado
 Totally Spies!
 Totally Spies! 2: Undercover
 Totally Spies! Totally Party
@@ -5483,7 +5483,7 @@ Vice: Project Doom
 Victor Vran: Overkill Edition
 Victorious Boxers: Revolution
 Victorious: Taking the Lead
-Victory Road (game)
+Victory Road
 Victory Run
 Viewtiful Joe
 Viewtiful Joe: Double Trouble!
@@ -5691,7 +5691,7 @@ WWF Superstars 2
 WWF War Zone
 WWF WrestleMania 2000
 X2: Wolverine's Revenge
-X (1992 video game)
+X
 X-Men Legends
 X-Men Legends II: Rise of Apocalypse
 X-Men Origins: Wolverine
@@ -5712,7 +5712,7 @@ Xeodrifter
 Xevious
 Xexyz
 Xtreme Wheels
-Yakuman (video game)
+Yakuman
 Yakuman DS
 Yakuman Wii: Ide Yosuke no Kenkou Mahjong
 Yakōchū II: Satsujin Kōro
@@ -5737,7 +5737,7 @@ Yoku's Island Express
 Yomawari - The Long Night Collection
 Yooka-Laylee
 Yooka-Laylee and the Impossible Lair
-Yoshi (video game)
+Yoshi
 Yoshi Topsy-Turvy
 Yoshi Touch & Go
 Yoshi's Cookie
