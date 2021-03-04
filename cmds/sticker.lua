@@ -9,14 +9,21 @@ local format = {
 }
 
 function sticker:run(param, perms)
-    local message = help.resolveMessage(self, param, true)
-    if not message then
-        return nil, 'need a valid message to steal sticker'
-    end
+    local message = help.resolveMessage(self, param)
     if not perms.bot:has'attachFiles' then return nil, 'i need image perms' end
     
     local data = help.APIget(message.channel, message.id)
     local stickers = data.stickers
+
+    if not stickers then 
+        local messages = API:getChannelMessages(self.channel.id)
+        for i, m in pairs(messages) do
+            if m.stickers then
+                stickers = m.stickers
+                break
+            end
+        end
+    end
 
     if stickers then
         local wait = self:reply("this might take a minute")
@@ -39,6 +46,6 @@ function sticker:run(param, perms)
             return nil, 'i don\'t know how to get the link of this sticker'
         end
     else
-        return nil, 'that message doesn\'t contain a sticker'
+        return nil, 'need some stickers'
     end
 end
