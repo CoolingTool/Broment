@@ -31,7 +31,12 @@ function serverEmojis:run(param, perms)
 
     local emojis
     if obj then
-        emojis = table.copy(guild.emojis:toArray())
+        emojis = {}
+        for i, e in pairs(guild.emojis) do
+            if e._available then
+                table.insert(emojis, e)
+            end
+        end
         table.sort(emojis, function(a,b)
             return help.alphasort(b.name:lower(), a.name:lower())
         end)
@@ -69,7 +74,7 @@ function serverEmojis:run(param, perms)
         rows[n] = rows[n] .. 
         ((class.isObject(e) and
         "<%s:%s:%s>"%
-        {e.animated and 'a' or '', '__', e.id}) or
+        {e.animated and 'a' or '', help.truncate(e.name, 2, ''), e.id}) or
         (tostring(e)))
         
         if (((i - 1) % per) + 1) ~= per then

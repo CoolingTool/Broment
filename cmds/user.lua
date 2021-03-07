@@ -1,6 +1,10 @@
 local user = commands 'user' '[user]*'
 user.help = 'get a users public info'
-user.alias = {'userInfo', 'user-info', 'user_info'}
+user.alias = {
+    'userInfo', 'user-info', 'user_info',
+    'memberInfo', 'member-info', 'member_info',
+    'member', 'whois'
+}
 
 local statuses = {
     online = {'Online', 0x43b581},
@@ -59,6 +63,7 @@ function user:run(param, perms)
 
     local type = help.getTypeOfUser(u)
 
+    local description = ''
     local fields = {
         {name = 'User ID', value = u.id},
     }
@@ -72,6 +77,20 @@ function user:run(param, perms)
         {name = 'Type', value = type, inline = true})
     end
     if localM then
+        local roles = {}
+        description = {}
+        for i, r in pairs(m.roles) do
+            if r.position ~= 0 and not r.managed  then
+                table.insert(roles, r)
+            end
+        end
+        table.sort(roles, function(a, b) return a.position > b.position end)
+        for i = 1, math.min(#roles, 80) do
+            description[i] = roles[i].mentionString
+        end 
+
+        description = table.concat(description, ' ')
+
         if m.nickname then
             table.insert(fields,
             {name = 'Nickname', value = m.nickname, inline = true})
@@ -138,6 +157,7 @@ function user:run(param, perms)
         embed = {
             url = u.avatarURL..'?size=1024',
             title = u.tag,
+            description = help.boolNil(description ~= '' and ('**Roles**\n'..description)),
             thumbnail = {url = u.avatarURL},
             fields = fields,
             color = status[2],

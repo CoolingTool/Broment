@@ -6,7 +6,10 @@ function calc:run(param)
     if not param then return nil, 'equation needed' end
     if param:find("function") then return nil, 'no' end
 
-    local sandbox = setmetatable({},{__index = function(t, i)
+    local sandbox = setmetatable({
+        math = math, bit = bit,
+        utf8 = utf8, string = string,
+    },{__index = function(t, i)
         local ret = math[i] or bit[i]
         if not ret then
             return nil
@@ -26,12 +29,10 @@ function calc:run(param)
             return nil, "no result"
         else
             for i = 1, ret.n do
-                ret[i] = help.truncate(pp.dump(ret[i], nil, true), 20, '...')
+                ret[i] = pp.dump(ret[i], nil, true)
             end
 
-            return '>>> '..
-            help.code(' '..table.concat(ret, ' | ')..' ', 'py'),
-            {safe = true}
+            return table.concat(ret, ', '), {safe = true}
         end
     end
 
