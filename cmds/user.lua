@@ -64,9 +64,7 @@ function user:run(param, perms)
     local type = help.getTypeOfUser(u)
 
     local description = ''
-    local fields = {
-        {name = 'User ID', value = u.id},
-    }
+    local fields = {}
 
     if status[1] then
         table.insert(fields,
@@ -131,37 +129,37 @@ function user:run(param, perms)
     if localM then
         if m.premiumSince then
             table.insert(fields,
-            {name = 'Boosting Since', value = date.fromISO(m.premiumSince):toHeader()})
+            {name = 'Boosting Since', value = date.fromISO(m.premiumSince):toHeader(), inline = true})
         end
         if m.joinedAt then
             table.insert(fields,
-            {name = 'Server Join Date', value = date.fromISO(m.joinedAt):toHeader()})
+            {name = 'Server Join Date', value = date.fromISO(m.joinedAt):toHeader(), inline = true})
         end
     end
 
     table.insert(fields, 
-    {name = 'Discord Join Date', value = date.fromSnowflake(u.id):toHeader()})
+    {name = 'Discord Join Date', value = date.fromSnowflake(u.id):toHeader(), inline = true})
 
-    local footer
-    if a and a.name == 'Custom Status' then
-        footer = {text = utf8.char(0x200B)}
+    local author
+    if a and a.type == 4 then
+        author = {name = utf8.char(0x200B)}
         if a.emojiHash then
-            footer.icon_url = a.emojiURL or help.twemoji(a.emojiHash)
+            author.icon_url = a.emojiURL or help.twemoji(a.emojiHash)
         end
         if a.state then
-            footer.text = footer.text .. a.state
+            author.name = author.name .. a.state
         end
     end
 
     return {
         embed = {
-            url = u.avatarURL..'?size=1024',
-            title = u.tag,
-            description = help.boolNil(description ~= '' and ('**Roles**\n'..description)),
-            thumbnail = {url = u.avatarURL},
-            fields = fields,
             color = status[2],
-            footer = footer
+            thumbnail = {url = u.avatarURL},
+            author = author,
+            url = u:getAvatarURL(1024), title = u.tag,
+            description = help.boolNil(description ~= '' and ('**Roles**\n'..description)),
+            fields = fields,
+            footer = {text = u.id}
         }
     }, {safe = true}
 end
