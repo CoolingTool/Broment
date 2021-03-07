@@ -40,7 +40,7 @@ error.hidden = true
 function error:run(param)
     local cmd, err = help.split(param)
     return string.format(
-        'sorry guy there was a error when running command `%s`\n%s',
+        'sorry guy there was a error when running command `%s`\n>>> %s',
         cmd, help.code(tostring(err),'rs')
     ), {safe = true}
 end
