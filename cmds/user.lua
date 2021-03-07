@@ -93,6 +93,10 @@ function user:run(param, perms)
             table.insert(fields,
             {name = 'Nickname', value = m.nickname, inline = true})
         end
+
+        if self.guild.ownerId == u.id then
+            table.insert(fields, {name = 'Owner', value = "Yes", inline = true})
+        end
     end
 
     if perms.bot:has'useExternalEmojis' then
@@ -139,6 +143,23 @@ function user:run(param, perms)
 
     table.insert(fields, 
     {name = 'Discord Join Date', value = date.fromSnowflake(u.id):toHeader(), inline = true})
+
+    if localM then
+        local members = self.guild.members:toArray()
+        table.sort(members, function(a, b) return date.fromISO(a.joinedAt) < date.fromISO(b.joinedAt) end)
+
+        local key = 0
+        for i, m in pairs(members) do if m.id == u.id then key = i break end end
+
+        local i = math.clamp(key - 3, 0, math.max(0, self.guild.totalMemberCount - 5))
+        
+        local order = help.concat(F" ${e.arrow_right} ", function(m)
+            i = i + 1
+            return string.format(key == i and "%s %s" or "%s", m.mentionString, F"**(#${i})**")
+        end)(table.slice(members, i + 1, i + 5))
+
+        table.insert(fields, {name = 'Join Order', value = order})
+    end
 
     local author
     if a and a.type == 4 then
