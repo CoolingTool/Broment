@@ -2,6 +2,8 @@ local calc = commands 'math' '[equation]'
 calc.help = 'runs equation using lua'
 calc.alias = {'calc', 'calculator'}
 
+string.rep = nil
+
 function calc:run(param)
     if not param then return nil, 'equation needed' end
     if param:find("function") then return nil, 'no' end
