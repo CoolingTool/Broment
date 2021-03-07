@@ -31,15 +31,8 @@ function serverEmojis:run(param, perms)
 
     local emojis
     if obj then
-        emojis = {}
-        for i, e in pairs(guild.emojis) do
-            if e._available then
-                table.insert(emojis, e)
-            end
-        end
-        table.sort(emojis, function(a,b)
-            return help.alphasort(b.name:lower(), a.name:lower())
-        end)
+        emojis = guild.emojis:toArray('name', function(e) return e._available end)
+        table.reverse(emojis)
     else
         emojis = {}
         for i, e in pairs(guild) do 
