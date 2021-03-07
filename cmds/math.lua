@@ -7,7 +7,7 @@ function calc:run(param)
     if param:find("function") then return nil, 'no' end
 
     local sandbox = setmetatable({
-        math = math, bit = bit,
+        math = math, bit = bit, F = F,
         utf8 = utf8, string = string,
     },{__index = function(t, i)
         local ret = math[i] or bit[i]

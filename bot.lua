@@ -29,6 +29,7 @@ local uv = require('uv')
 local spawn = require('coro-spawn')
 local lpeg = require('lpeg')
 local lip = require('LIP')
+local F = require("F")
 local dofile = require('dofile')
 local len = utf8.len
 
@@ -55,7 +56,7 @@ local variables = { -- update when new variable added -- }
     discordia = discordia, classes = classes, len = len,
     defaultColor = defaultColor, require = require, lip = lip,
     logger = logger, log = log, config = config, spawn = spawn,
-    games = games,} variables.variables = variables 
+    games = games, F = F} variables.variables = variables 
 
 local bot, prefixes, custom, appInfo, apiPing
 client:once('ready', function()
