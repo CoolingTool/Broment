@@ -1,5 +1,10 @@
 local sticker = commands 'sticker' '[message]'
-sticker.alias = {'stealsticker', 'stickerSteal', 'getsticker', 's'}
+sticker.alias = {
+    'stealSticker', 'steal-sticker', 'steal_sticker',
+    'stickerSteal', 'sticker-steal', 'sticker_steal',
+    'getSticker', 'get-sticker', 'get_sticker',
+    's'
+}
 sticker.help = 'gets sticker and converts it to gif'
 
 local format = {
