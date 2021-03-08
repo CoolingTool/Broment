@@ -1,5 +1,6 @@
 local char = commands 'char' '[chars]'
 char.help = 'get char info (limited to 15 at a time)'
+char.alias = 'charinfo'
 
 function char:run(param)
     if not param then return nil, 'text characters needed' end
