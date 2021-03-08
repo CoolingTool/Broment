@@ -111,5 +111,6 @@ function serverEmojis:run(param, perms)
             icon_url = guild.iconURL
         },
         fields = fields,
+        footer = {text = F"${#emojis} Emoji${#emojis == 1 and '' or 's'}"},
     })
 end
