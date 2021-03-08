@@ -48,10 +48,17 @@ function events.messageCreate(msg)
 end
 
 function events.messageUpdate(msg)
-    if msg.author == bot
-    and msg:hasFlag(enum.messageFlag.suppressEmbeds)
-    and not msg._keepEmbedHidden  then
-        msg:showEmbeds()
+    if msg.author == bot then
+        if (msg:hasFlag(enum.messageFlag.suppressEmbeds))
+        and (not msg._keepEmbedHidden) then
+            timer.sleep(1000)
+            msg:showEmbeds()
+        elseif (not msg:hasFlag(enum.messageFlag.suppressEmbeds))
+        and (msg._keepEmbedHidden) then
+            timer.sleep(1000)
+            msg:hideEmbeds()
+
+        end
     end
 end
 
