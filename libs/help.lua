@@ -644,6 +644,42 @@ local help = {}
             help.runCmd(commands.error, msg, help.concat";"(cmd.name, ret), perms, true)
         end
     end
+--[[ work ]]
+    function help.work(func, ...)
+        local current = coroutine.running()
+        local dump = string.dump(func)
+        local cwd = (getfenv(2).module or {}).path
+        local args = table.pack(...)
+        timer.setTimeout(1, function()
+            local w = require('thread').work(function(_dump, _cwd, ...)
+            
+                if _cwd then
+                    _G.require, _G.module = require('require')(_cwd)
+                end
+
+                local complie, err =  load(_dump, "thread", "b", _G)
+                if complie then
+                    return pcall(complie, ...)
+                else
+                    return false, err
+                end
+
+            end, function(...) coroutine.resume(current, ...) end)
+
+            local succ, err = pcall(w.queue, w, dump, cwd, table.unpack(args))
+
+            if not succ then
+                coroutine.resume(current, false, err)
+            end
+        end)
+        local ret = table.pack(coroutine.yield())
+
+        if not ret[1] then
+            error(ret[2], 0)
+        else
+            return unpack(ret, 2, ret.n)
+        end
+    end
 --[[ text2decimal ]]
     function help.text2decimal(text)
         local n = 0
