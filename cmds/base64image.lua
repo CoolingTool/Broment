@@ -21,7 +21,7 @@ function base64image:run(param, perms)
 
     if ext then 
         return {
-            file = {table.concat({self.id,ext},'.'),require "openssl".base64(data,false)}
+            file = {table.concat({self.id,ext},'.'), openssl.base64(data,false)}
         }
     else
         return nil, '`data:image/{ext};base64,{base64}}` expected'
