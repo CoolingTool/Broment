@@ -32,6 +32,16 @@ function lavadrop:run(param, perms)
     end
 end
 
+local sorry = commands 'sorry' '[text]*'
+sorry.help = "stupid horse, i just fell out of the porsche"
+sorry.hidden = true
+
+function sorry:run(param)
+    return string.format(
+        'sorry guy but %s........',
+        param
+    ), {safe = true}
+end
 
 local error = commands 'error' '[command]*; [error]*'
 error.help = "you talk a lotta big game for someone with such a small truck"
@@ -45,16 +55,13 @@ function error:run(param)
     ), {safe = true}
 end
 
+local channelCooldown = commands 'channelCooldown' '[command]*; [text]'
+channelCooldown.help = 'I was trying to find a way to kill time'
+channelCooldown.hidden = true
 
-local sorry = commands 'sorry' '[text]*'
-sorry.help = "stupid horse, i just fell out of the porsche"
-sorry.hidden = true
-
-function sorry:run(param)
-    return string.format(
-        'sorry guy but %s........',
-        param
-    ), {safe = true}
+function channelCooldown:run(param)
+    local cmd, time = help.split(param)
+    return nil, F'`${cmd}` is on cooldown for ${time}'
 end
 
 

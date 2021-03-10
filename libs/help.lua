@@ -595,6 +595,23 @@ local help = {}
     setmetatable(help.limits,{__call = _})
 --[[ runCmd ]]
     function help.runCmd(cmd, msg, param, perms, cantErr)
+        if cmd.channelCooldown then
+            msg.channel._cooldown = msg.channel._cooldown or {}
+
+            if (not msg.channel._cooldown[cmd.name])
+            or msg.channel._cooldown[cmd.name] < os.time() then
+                msg.channel._cooldown[cmd.name] = cmd.channelCooldown + os.time()
+            else
+                help.runCmd(commands.channelcooldown, msg,
+                    help.concat";"(
+                        cmd.name,
+                        time.fromSeconds(msg.channel._cooldown[cmd.name] - os.time()):toString()
+                    ),
+                perms, true)
+                return nil
+            end
+        end
+
         local succ, ret, ret2 = pcall(cmd.run, msg, param, perms)
 
         local options = type(ret2) == 'table' and ret2 or {}
