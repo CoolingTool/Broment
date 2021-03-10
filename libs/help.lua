@@ -79,10 +79,7 @@ local help = {}
         if not str then return false, ret2 end
 
         local ret = string.trim(str:gsub("(%S+)(%s-)",function(word, spaces)
-            local capture, value = word:match("^%-%-(%a)%a+=?(.*)$")
-            if not capture then
-                capture, value = word:match("^%-(%a)=?(.*)$")
-            end
+            local capture, value = word:match("^%-(%a)%a+=?(.*)$")
             
             if capture then
                 ret2[capture:lower()] = value == '' and true or value
@@ -737,7 +734,7 @@ local help = {}
         }..'\n'..help.style.help(t.help),
             t.flags and (
                 help.concat("\n", function(f)
-                    return '--'..f[1]..
+                    return '-'..f[1]..
                         (f[3] and ('='..f[3]) or '')..
                         (' (-'..f[1]:sub(1,1)..
                             (f[3] and ('='..f[3]) or '')..
