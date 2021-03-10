@@ -5,7 +5,9 @@ avatar.flags = {
     {'default',
     'shows default avatar'},
     {'size',
-    'changes image size (16 - 4096)', 'NUMBER'}
+    'changes image size (16 - 4096)', 'NUMBER'},
+    {'archive',
+    'downloads image incase avatar link expires'}
 }
 
 function avatar:run(...)
@@ -19,9 +21,19 @@ function avatar:run(...)
             16, 4096
         ) or 1024
 
-    return (args.d and 
-        user:getDefaultAvatarURL(size) or
-        user:getAvatarURL(size))
-        ..' _ _',
-        {safe = true}
+    local link = args.d and user:getDefaultAvatarURL(size) or user:getAvatarURL(size)
+    local ext = user._avatar:find('a_') == 1 and 'gif' or 'png'
+
+    if args.a then
+        local wait = self:reply('downloading avatar...')
+        self.channel:broadcastTyping()
+        local data = select(3, pcall(http.request, 'GET', link))
+
+        return {content = '<'..link..'>', file = {
+            user.name..'.'..(user._avatar:find('a_') == 1 and 'gif' or 'png'),
+            data
+        }}, {remove = wait}
+    else
+        return link..' _ _'
+    end
 end
