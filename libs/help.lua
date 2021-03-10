@@ -651,7 +651,7 @@ local help = {}
         local cwd = (getfenv(2).module or {}).path
         local args = table.pack(...)
         timer.setTimeout(1, function()
-            local w = require('thread').work(function(_dump, _cwd, ...)
+            local w = thread.work(function(_dump, _cwd, ...)
             
                 if _cwd then
                     _G.require, _G.module = require('require')(_cwd)

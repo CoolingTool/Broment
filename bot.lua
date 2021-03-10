@@ -31,6 +31,9 @@ local lpeg = require('lpeg')
 local lip = require('LIP')
 local F = require("F")
 local dofile = require('dofile')
+local miniz = require('miniz')
+local openssl = require('openssl')
+local thread = require('thread')
 local len = utf8.len
 
 local defaultColor = color.fromRGB(38, 101, 144)
