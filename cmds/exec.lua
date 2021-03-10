@@ -2,7 +2,7 @@ local exec = commands 'exec'
 exec.alias = 'eval'
 exec.hidden = true
 
-function exec:run(param)
+function exec:run(param, perms)
     if self.author.id ~= client.owner.id then
         return nil, 'you can\'t use this command'
     end
@@ -17,6 +17,7 @@ function exec:run(param)
 
     sandbox.self = self
     sandbox.param = param
+    sandbox.perms = perms
     sandbox.io = table.copy(io)
 
     function sandbox.print(...) out = out .. help.printLine(...) end
