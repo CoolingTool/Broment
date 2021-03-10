@@ -94,6 +94,11 @@ function user:run(param, perms)
             {name = 'Nickname', value = m.nickname, inline = true})
         end
 
+        local color = m:getColor():toHex()
+        if color ~= '#000000' then
+            table.insert(fields, {name = 'Role Color', value = color, inline = true})
+        end
+
         if self.guild.ownerId == u.id then
             table.insert(fields, {name = 'Owner', value = "Yes", inline = true})
         end
