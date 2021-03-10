@@ -59,6 +59,7 @@ local variables = { -- update when new variable added -- }
     discordia = discordia, classes = classes, len = len,
     defaultColor = defaultColor, require = require, lip = lip,
     logger = logger, log = log, config = config, spawn = spawn,
+    openssl = openssl, miniz = miniz, thread = thread,
     games = games, F = F} variables.variables = variables 
 
 local bot, prefixes, custom, appInfo, apiPing
