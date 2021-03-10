@@ -19,5 +19,5 @@ function topic:run(param, perms)
         self.channel:setTopic()
     end 
 
-    return 'channel topic set as `'..help.truncate(param, 50, "...")..'`', {safe = true}
+    return 'channel topic set as '..help.truncate(param, 50, "..."), {safe = true}
 end
