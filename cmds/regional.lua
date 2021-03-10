@@ -2,7 +2,14 @@ local regional = commands 'regional' '[text]'
 regional.help = 'turn text into the big blue emoji'
 
 function regional:run(param)
-    if not param then return nil, 'text needed' end
+    local param, args = help.dashParse(param)
+
+    local message = help.resolveMessage(self, param, true)
+    if message then
+        param = message.content
+    end
+    
+    if not param then return '🇸​🇴​🇷​🇷​🇾 🇬​🇺​🇾 🇧​🇺​🇹 🇹​🇪​🇽​🇹 🇳​🇪​🇪​🇩​🇪​🇩........' end
 
     return param
         :gsub('[%d%#%*]', '%1\239\184\143\226\131\163') -- numbers
