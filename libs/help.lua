@@ -597,6 +597,8 @@ local help = {}
     function help.runCmd(cmd, msg, param, perms, cantErr)
         local succ, ret, ret2 = pcall(cmd.run, msg, param, perms)
 
+        local options = type(ret2) == 'table' and ret2 or {}
+
         if succ then
             ret = (ret ~= nil) and (class.isObject(ret) or
                 type(ret) ~= 'table')
@@ -619,7 +621,7 @@ local help = {}
                         else
                             succ, ret = msg:reply("_ _")
                         end
-                    elseif type(ret2) == 'table' then
+                    elseif options.safe or options.reply then
                         local raw = type(ret) == 'table' and ret or {}
 
                         if type(ret) == 'string' then
@@ -627,7 +629,9 @@ local help = {}
                         end
 
                         raw.allowed_mentions = raw.allowed_mentions or
-                            ret2['safe'] and {parse = {}}
+                            options.safe and {parse = {}}
+                        raw.message_reference = raw.message_reference or
+                            options.reply and {message_id = resolver.messageId(options.reply)}
 
                         succ, ret = help.APIsend(msg.channel, raw)
                     else
@@ -642,6 +646,8 @@ local help = {}
 
         if (not succ) and (not cantErr) then
             help.runCmd(commands.error, msg, help.concat";"(cmd.name, ret), perms, true)
+        elseif options.remove then
+            options.remove:delete()
         end
     end
 --[[ work ]]

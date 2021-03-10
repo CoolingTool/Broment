@@ -41,12 +41,11 @@ function sticker:run(param, perms)
             local succ, res, source = pcall(http.request, 'GET', link)
 
             local result = known[3](source)
-            wait:delete()
             
             return {
                 content = '<'..link..'>',
                 file = {'%s.gif'%{sticker.name}, result}
-            }
+            }, {remove = wait}
         else
             return nil, 'i don\'t know how to get the link of this sticker'
         end

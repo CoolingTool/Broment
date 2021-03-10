@@ -6,6 +6,8 @@ function base64image:run(param, perms)
     if not perms.bot:has'attachFiles' then 
         return nil, 'need image perms'
     end
+
+    self.channel:broadcastTyping()
     
     local url = self.attachment and self.attachment.url:find(".txt$") and self.attachment.url  
     if url then
@@ -19,7 +21,7 @@ function base64image:run(param, perms)
 
     local ext, data = param:match"^data:image/(%a+);base64,([%w%//%+%=]+)$"
 
-    if ext then 
+    if ext then
         return {
             file = {table.concat({self.id,ext},'.'), openssl.base64(data,false)}
         }

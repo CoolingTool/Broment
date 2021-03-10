@@ -15,7 +15,7 @@ function emojiZIP:run(param, perms)
 
     if #guild.emojis == 0 then return nil, 'this server has no emojis' end
 
-    local write = require('miniz').new_writer()
+    local write = miniz.new_writer()
     local message = self:reply('please wait im downloading every emoji in this server and putting it into a zip')
     self.channel:broadcastTyping()
 
@@ -24,6 +24,5 @@ function emojiZIP:run(param, perms)
         write:add(e.name..F".${e.animated and 'gif' or 'png'}", data, 9)
     end
 
-    message:delete()
-    return {file = {guild.name..'.zip', write:finalize()}}
+    return {file = {guild.name..'.zip', write:finalize()}}, {remove = message}
 end
