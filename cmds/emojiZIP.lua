@@ -21,9 +21,7 @@ function emojiZIP:run(param, perms)
 
     for i, e in pairs(guild.emojis) do
         local data = select(3, pcall(http.request, 'GET', e.url))
-        coroutine.wrap(function()
-            write:add(e.name..F".${e.animated and 'gif' or 'png'}", data, 9)
-        end)()
+        write:add(e.name..F".${e.animated and 'gif' or 'png'}", data, 9)
     end
 
     message:delete()
