@@ -607,7 +607,7 @@ local help = {}
             if type(ret) == 'string' and len(ret) > 2000 then
                 succ, ret = msg:reply{
                     content = 'sorry guy but message too long',
-                    file = {'message.txt', ret}
+                    file = {F'message${date():toISO()}.txt', ret}
                 }
             else
                 if succ and ret then

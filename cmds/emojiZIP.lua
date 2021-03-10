@@ -9,7 +9,7 @@ emojiZIP.alias = {
 function emojiZIP:run(param, perms)
     if not perms.bot:has('attachFiles') then  return nil, 'need post file perms' end
 
-    local guild = param and client:getGuild(param) or self.guild
+    local guild = param and client:getGuild(param) or (not param and self.guild)
 
     if not guild then return nil, 'guild needed' end
 
@@ -24,5 +24,5 @@ function emojiZIP:run(param, perms)
         write:add(e.name..F".${e.animated and 'gif' or 'png'}", data, 9)
     end
 
-    return {file = {guild.name..'.zip', write:finalize()}}, {remove = message}
+    return {file = {F'${guild.name:lower()} emojis ${date():toISO()}.zip', write:finalize()}}, {remove = message}
 end
