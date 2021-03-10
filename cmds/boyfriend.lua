@@ -1,4 +1,4 @@
-local boyfriend = commands 'boyfriend' '[text]'
+local boyfriend = commands 'boyfriend' '[text/message]'
 boyfriend.help = "aa-ba bop skda baap-aa skde be-bap baap-bop-bep\n"..
     "(converts text to friday night funkin gibberish)"
     boyfriend.alias = {'bf', 'fnf', 'funkin'}
@@ -14,6 +14,11 @@ local dialog = {
 }
 
 function boyfriend:run(param)
+    local message = help.resolveMessage(self, param, true)
+    if message then
+        param = message.content
+    end
+
     if not param then
         return "aa-bap skde aa beep skda-bep........ (sorry guy but text needed........)"
     end
