@@ -79,7 +79,7 @@ local help = {}
         if not str then return false, ret2 end
 
         local ret = string.trim(str:gsub("(%S+)(%s-)",function(word, spaces)
-            local capture, value = word:match("^%-(%a)%a+=?(.*)$")
+            local capture, value = word:match("^%-(%a)%a*=?(.*)$")
             
             if capture then
                 ret2[capture:lower()] = value == '' and true or value
