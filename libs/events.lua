@@ -11,7 +11,6 @@ function events.messageCreate(msg)
     
     local hasCumber = msg.content:find(e.cucumber) or
         msg.content:lower():find'c?u?%-?cumb[ae]r?'
-    local hasBoyTone5 = msg.content:lower():find'\110\105\103'
 
     local cmdQuery, param = help.cmdParse(msg, {
         ';', botRole, bot.name, semiMention, semiRoleMention,
@@ -29,9 +28,6 @@ function events.messageCreate(msg)
             if custom.cucumba and botPerm:has"useExternalEmojis" then
                 msg:addReaction(custom.cucumba)
             else msg:addReaction(e.cucumber) end
-        end
-        if hasBoyTone5 and botPerm:has'addReactions' then
-            msg:addReaction(e.boy_tone5)
         end
 
         if canSend and cmdQuery then
