@@ -25,6 +25,8 @@ function avatar:run(...)
     local ext = user._avatar:find('a_') == 1 and 'gif' or 'png'
 
     if args.a then
+        if not perms.bot:has'attachFiles' then return nil, 'i need image perms' end
+
         local wait = self:reply('downloading avatar...')
         self.channel:broadcastTyping()
         local data = select(3, pcall(http.request, 'GET', link))
