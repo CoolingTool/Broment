@@ -5,7 +5,7 @@ reverse.flags = {
     'reverse by each character instead'},
 }
 
-local pattern = '%a+'
+local pattern = '[%a%\']+'
 
 function reverse:run(param)
     local param, args = help.dashParse(param)

@@ -1,7 +1,7 @@
 local sort = commands 'sort' '[text/message]'
 sort.help = 'sorts text'
 
-local pattern = '%a+'
+local pattern = '[%a%\']+'
 
 function sort:run(param)
     local message = help.resolveMessage(self, param, true)
