@@ -484,6 +484,10 @@ local help = {}
     function help.fapi(endpoint, args)
         args = args or {}
 
+        if type(args) == 'string' then
+            args = {text = args}
+        end
+
         if args.query then
             endpoint = endpoint..'?'..querystring.stringify(query)
             args.query = nil
