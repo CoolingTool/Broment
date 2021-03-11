@@ -1,6 +1,11 @@
-local base64image = commands 'base64ToImage' '[base64]'
+local base64image = commands 'base64image' '[base64]'
 base64image.help = 'turn a base64 image to its original form'
-base64image.alias = {'base64img', 'b64image', 'b64img'}
+base64image.alias = {
+    'base64-image', 'base64_image',
+    'base64img', 'base64-img', 'base64_img',
+    'b64image', 'b64-image', 'b64_image',
+    'b64img', 'b64-image', 'b64_image'
+}
 
 function base64image:run(param, perms)
     if not perms.bot:has'attachFiles' then 
