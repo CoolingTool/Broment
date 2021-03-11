@@ -3,7 +3,7 @@ bro.help = 'tests how much of bros two people are'
 bro.flags = {
     help.textFlag
 }
-bro.alias = 'bromometer'
+bro.alias = {'bromometer', 'ship'}
 
 local icons = {
     e.bust_in_silhouette,
