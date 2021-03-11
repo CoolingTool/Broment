@@ -13,3 +13,5 @@ This bot is expected to have the Presence and Server Members Intent.
 - [Inkscape](https://inkscape.org/)
 - [puppeteer-lottie-cli](https://github.com/transitive-bullshit/puppeteer-lottie-cli)
 - [coro-spawn](https://luvit.io/lit.html#coro-spawn)
+- [discordia-slash](https://github.com/GitSparTV/discordia-slash)
+- [fAPI](https://fapi.dreadful.tech/)

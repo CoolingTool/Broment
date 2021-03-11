@@ -1,5 +1,6 @@
 local discordia = require('discordia')
-local client = discordia.Client{cacheAllMembers = true, logFile = '', logLevel = 0}
+local slash = require("discordia-slash")
+local client = discordia.Client{cacheAllMembers = true, logFile = '', logLevel = 0}:useSlashCommands()
 local time = discordia.Time
 local date = discordia.Date
 local class = discordia.class
@@ -61,7 +62,7 @@ local variables = { -- update when new variable added -- }
     defaultColor = defaultColor, require = require, lip = lip,
     logger = logger, log = log, config = config, spawn = spawn,
     openssl = openssl, miniz = miniz, thread = thread,
-    querystring = querystring,
+    querystring = querystring, slash = slash, 
     games = games, F = F} variables.variables = variables 
 
 local bot, prefixes, custom, appInfo, apiPing

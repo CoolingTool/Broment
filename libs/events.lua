@@ -67,10 +67,6 @@ function events.heartbeat(_, ping)
     variables.apiPing = apiPing
 end
 
-function events.commandTriggered(interaction)
-    interaction:reply(5)
-end
-
 function events.info(message)
     log(enum.logLevel.info, message)
 end
@@ -79,24 +75,21 @@ function events.error(message)
     log(enum.logLevel.error, message)
 end
 
-
-
-
-function client._events.INTERACTION_CREATE(d, client)
-    if d.type == 2 then
-        function d:reply(responseType, data)
-            local endpoint = "/interactions/"..self.id.."/"..self.token.."/callback"
-
-            if type(data) == 'string' then data = {content = data} end
-
-            return API:request('POST', endpoint, {
-                type = responseType,
-                data = data
-            })
-        end
-
-        return client:emit('commandTriggered', d)
-    end
+function events.slashCommandsReady()
+	client:slashCommand({
+		name = "nothing",
+		description = "command that does nothing",
+		options = {
+			{
+				name = "params",
+				description = "parameters that do nothing",
+				type = slash.enums.optionType.string,
+            }
+		},
+		callback = function(ia, params, cmd)
+            ia:ack()
+		end
+	})
 end
 
 return events
