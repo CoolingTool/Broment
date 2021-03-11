@@ -14,7 +14,7 @@ function calc:run(param)
     local param = param:find("^9%s*+%s*10$") and '21' or param
 
     local sandbox = setmetatable({
-        math = math, bit = bit
+        math = math, bit = bit, π = math.pi,
     },{__index = function(t, i)
         local ret = math[i] or bit[i]
         if not ret then
