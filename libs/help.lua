@@ -700,6 +700,12 @@ local help = {}
             options.remove:delete()
         end
     end
+--[[ wait ]]
+    function help:wait(data)
+        local wait = self:reply(data)
+        self.channel:broadcastTyping()
+        return wait
+    end
 --[[ work ]]
     function help.work(func, ...)
         local current = coroutine.running()
