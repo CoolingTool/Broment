@@ -34,6 +34,7 @@ local dofile = require('dofile')
 local miniz = require('miniz')
 local openssl = require('openssl')
 local thread = require('thread')
+local querystring = require('querystring')
 local len = utf8.len
 
 local defaultColor = color.fromRGB(38, 101, 144)
@@ -60,6 +61,7 @@ local variables = { -- update when new variable added -- }
     defaultColor = defaultColor, require = require, lip = lip,
     logger = logger, log = log, config = config, spawn = spawn,
     openssl = openssl, miniz = miniz, thread = thread,
+    querystring = querystring,
     games = games, F = F} variables.variables = variables 
 
 local bot, prefixes, custom, appInfo, apiPing
