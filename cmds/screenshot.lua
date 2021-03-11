@@ -1,6 +1,6 @@
-local ss = commands 'ss' '[url]'
+local ss = commands 'screenshot' '[url]'
 ss.help = 'screenshot a site for when notsobot is down'
-ss.alias = 'screenshot'
+ss.alias = 'ss'
 
 function ss:run(param, perms)
     if not param then return nil, 'site needed' end
