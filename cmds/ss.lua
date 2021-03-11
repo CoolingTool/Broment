@@ -9,5 +9,5 @@ function ss:run(param, perms)
     local wait = self:reply('please wait...')
     self.channel:broadcastTyping()
 
-    return {file = {'ss.png', help.fapi('screenshot', {text = param})}}, {remove = wait}
+    return {file = {'ss.png', help.fapi('screenshot', param)}}, {remove = wait}
 end
