@@ -12,7 +12,7 @@ function emote:run(param, perms)
 
     local a, custom, id = query:match'^<(a?):(.+):(%d+)>$'
 
-    id = tonumber(query) and query or id
+    id = query:find("^%d+$") and query or id
 
     local filename, source, link, show
     if id then
