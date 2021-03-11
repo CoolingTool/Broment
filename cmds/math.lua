@@ -2,15 +2,21 @@ local calc = commands 'math' '[equation]'
 calc.help = 'runs equation using lua'
 calc.alias = {'calc', 'calculator'}
 
-local blacklist = {'"', "'", "[[", "]]", "{", "}", "function"}
-
 function calc:run(param)
     if not param then return nil, 'equation needed' end
     
-    local wait = help.wait(self, 'calculating...')
+    self.channel:broadcastTyping()
 
-    return help.truncate(help.fapi('rex', {
-        text = F[[print( ${param} )]],
+    local data = help.fapi('rex', {
+        text = F[[
+            math.randomseed(os.time())
+            setmetatable(math, {__index = bit})
+            setmetatable(_G, {__index = math}) 
+            print(${param})
+        ]],
         language = 'lua'
-     }), 2000, '...'), {safe = true, remove = wait}
+     })
+     data = (data:match("^[^:]+:[^:]+:[^:]+: ([^\n]+)") or data):trim()
+
+    return help.truncate(data, 2000, '...'), {safe = true}
 end
