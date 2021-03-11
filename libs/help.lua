@@ -632,7 +632,7 @@ local help = {}
             msg.channel._cooldown = msg.channel._cooldown or {}
 
             if (not msg.channel._cooldown[cmd.name])
-            or msg.channel._cooldown[cmd.name] < os.time() then
+            or msg.channel._cooldown[cmd.name] <= os.time() then
                 msg.channel._cooldown[cmd.name] = cmd.channelCooldown + os.time()
             else
                 help.runCmd(commands.channelcooldown, msg,
