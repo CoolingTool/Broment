@@ -561,7 +561,7 @@ local help = {}
                         for i, child in pairs(emoji.diversityChildren) do
                             for i, cname in pairs(child.names) do
                                 if cname == query then
-                                    self.cache[query] = emoji.surrogates
+                                    self.cache[query] = child.surrogates
                                     return child.surrogates
                                 end
                             end
