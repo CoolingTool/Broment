@@ -61,7 +61,7 @@ channelCooldown.hidden = true
 
 function channelCooldown:run(param)
     local cmd, time = help.split(param)
-    return nil, F'`${cmd}` is on cooldown for ${time}'
+    return nil, F'`${cmd}` is on cooldown in this channel for ${time}'
 end
 
 
