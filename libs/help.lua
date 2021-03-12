@@ -628,21 +628,30 @@ local help = {}
     setmetatable(help.limits,{__call = _})
 --[[ runCmd ]]
     function help.runCmd(cmd, msg, param, perms, cantErr)
+        local channel = msg.channel
+        local cmdCooldown
         if cmd.channelCooldown then
-            msg.channel._cooldown = msg.channel._cooldown or {}
+            channel._cooldown = channel._cooldown or {}
 
-            if (not msg.channel._cooldown[cmd.name])
-            or msg.channel._cooldown[cmd.name] <= os.time() then
-                msg.channel._cooldown[cmd.name] = cmd.channelCooldown + os.time()
-            else
+            channel._cooldown[cmd.name] = channel._cooldown[cmd.name] or {os.time(), 0}
+            cmdCooldown = channel._cooldown[cmd.name]
+
+            if cmdCooldown[1] <= os.time() then
+                cmdCooldown[1] = cmd.channelCooldown[1] + os.time()
+                cmdCooldown[2] = 0
+            end
+            if cmdCooldown[2] >= cmd.channelCooldown[2] then
                 help.runCmd(commands.channelcooldown, msg,
                     help.concat";"(
                         cmd.name,
-                        time.fromSeconds(msg.channel._cooldown[cmd.name] - os.time()):toString()
+                        time.fromSeconds(cmdCooldown[1] - os.time()):toString()
                     ),
                 perms, true)
                 return nil
             end
+
+            cmdCooldown[2] = cmdCooldown[2] + 1
+
         end
 
         local succ, ret, ret2 = pcall(cmd.run, msg, param, perms)
@@ -683,12 +692,13 @@ local help = {}
                         raw.message_reference = raw.message_reference or
                             options.reply and {message_id = resolver.messageId(options.reply)}
 
-                        succ, ret = help.APIsend(msg.channel, raw)
+                        succ, ret = help.APIsend(channel, raw)
                     else
                         succ, ret = msg:reply(ret)
                     end
                 elseif succ and (not ret) and (ret2) then
                     help.runCmd(commands.sorry, msg, ret2, perms, true)
+                    if cmdCooldown then cmdCooldown[2] = cmdCooldown[2] - 1 end
                     return nil
                 end
             end

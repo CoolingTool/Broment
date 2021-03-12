@@ -1,6 +1,6 @@
 local topic = commands 'topic' '[text]'
 topic.help = 'sets the topic of the current channel'
-topic.channelCooldown = 5 * 60
+topic.channelCooldown = {10 * 60, 2}
 
 function topic:run(param, perms)
     if not class.isInstance(self.channel, classes.GuildTextChannel) then
@@ -15,9 +15,9 @@ function topic:run(param, perms)
             return nil, 'channel topic must not be above 1024 character'
         end
         self.channel:setTopic(param)
+        return 'channel topic set as '..help.truncate(param, 500, "..."), {safe = true}
     else
         self.channel:setTopic()
+        return 'channel topic reset'
     end 
-
-    return 'channel topic set as '..help.truncate(param, 50, "..."), {safe = true}
 end
