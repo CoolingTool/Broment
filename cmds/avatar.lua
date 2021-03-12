@@ -10,8 +10,8 @@ avatar.flags = {
     'downloads image incase avatar link expires'}
 }
 
-function avatar:run(...)
-    local param, args = help.dashParse(...)
+function avatar:run(param, perms)
+    local param, args = help.dashParse(param)
 
     local user = help.resolveUser(self, param)
 
