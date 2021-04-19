@@ -39,7 +39,7 @@ local function format(_, str)
          if ok then return value end
          ok, value = scan_using(debug.getlocal, 7, k)
          if ok then return value end
-         return rawget(outer_env, k)
+         return outer_env[k]
       end })
       local fn, err = load("return "..code, "expression `"..code.."`", "t", exp_env)
       if fn then
