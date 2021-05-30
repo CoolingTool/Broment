@@ -27,7 +27,7 @@ function events.messageCreate(msg)
         if hasCumber and botPerm:has'addReactions' then
             if custom.cucumba and botPerm:has"useExternalEmojis" then
                 pcall(function()msg:addReaction(custom.cucumba)end)
-            else pcall(function()msg:addReaction(e.cucumber))end) end
+            else pcall(function()msg:addReaction(e.cucumber)end) end
         end
 
         if canSend and cmdQuery then
