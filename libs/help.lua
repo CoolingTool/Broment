@@ -480,6 +480,7 @@ local help = {}
             len(str) > 3 and '' or '%-fe0f', ''
         )
     end
+<<<<<<< HEAD
 --[[ fapi ]]
     function help.fapi(endpoint, args)
         args = args or {}
@@ -516,6 +517,8 @@ local help = {}
         assert(res.code == 200, res.reason)
         return data
     end
+=======
+>>>>>>> parent of bcb47c3 (add fapi (the thing notsobot uses for images))
 --[[ twemoji ]]
     function help.twemoji(emoji, options)
         options = options or {}
