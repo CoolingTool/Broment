@@ -480,45 +480,6 @@ local help = {}
             len(str) > 3 and '' or '%-fe0f', ''
         )
     end
-<<<<<<< HEAD
---[[ fapi ]]
-    function help.fapi(endpoint, args)
-        args = args or {}
-
-        if type(args) == 'string' then
-            args = {text = args}
-        end
-
-        if args.query then
-            endpoint = endpoint..'?'..querystring.stringify(query)
-            args.query = nil
-        end
-
-        local body = {}
-
-        if args.images then
-            body.images = args.images
-            args.images = nil
-        end
-
-        if next(args) then
-            body.args = args
-        end
-        
-        local succ, res, data =
-        pcall(http.request, 'POST', 'https://fapi.wrmsr.io/'..endpoint,
-            {
-                {'Authorization', 'Bearer '..config.keys.fapi},
-                {'Content-Type', 'application/json'},
-            },
-            json.encode(body)
-        )
-        assert(succ, res)
-        assert(res.code == 200, res.reason)
-        return data
-    end
-=======
->>>>>>> parent of bcb47c3 (add fapi (the thing notsobot uses for images))
 --[[ twemoji ]]
     function help.twemoji(emoji, options)
         options = options or {}

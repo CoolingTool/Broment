@@ -61,10 +61,7 @@ local variables = { -- update when new variable added -- }
     defaultColor = defaultColor, require = require, lip = lip,
     logger = logger, log = log, config = config, spawn = spawn,
     openssl = openssl, miniz = miniz, thread = thread,
-<<<<<<< HEAD
     querystring = querystring, slash = slash, 
-=======
->>>>>>> parent of bcb47c3 (add fapi (the thing notsobot uses for images))
     games = games, F = F} variables.variables = variables 
 
 local bot, prefixes, custom, appInfo, apiPing
