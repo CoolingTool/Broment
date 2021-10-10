@@ -17,7 +17,7 @@ function stats:run(param, perms)
         {   name = 'Uptime',
             help = time.fromSeconds(os.clock()):toString()},
         {   name = 'Host',
-            help = '%s %s (%s)'%{uname.version, uname.release, jit.arch}},
+            help = '%s %s (%s)'%{uname.sysname, uname.release, jit.arch}},
         {   name = 'Library',
             help = 'Discordia %s'%{discordia.package.version}},
         {   name = 'Luvit Version',
