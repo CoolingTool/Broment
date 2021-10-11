@@ -11,5 +11,7 @@ emoji_server_id=""
 apng2gif=./misc/apng2gif
 ; The path for Inkscape used for help.svg2png
 inkscape=%programfiles%\Inkscape\bin\inkscape.com
-; The path for puppeteer-lottie-cli used for help.lottie2gif
-puppeteer_lottie=%appdata%\npm\puppeteer-lottie.cmd
+; The path for lottieconverter used for help.lottie2gif
+lottieconverter=./misc/lottieconverter
+; The path for gifski used for help.lottie2gif
+gifski=/bin/gifski
