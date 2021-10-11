@@ -4,7 +4,7 @@ Broment is a Discord bot made with [Discordia](https://github.com/SinisterRectus
 
 Invite Broment to your server [here](https://discord.com/api/oauth2/authorize?client_id=745478766775762955&permissions=2147483639&scope=applications.commands%20bot).
 
-This was made on a Windows 10 PC so it will probably only work on Windows
+This is an in-development port of Broment from Windows to Linux.
 
 This bot is expected to have the Presence and Server Members Intent.
 
@@ -14,4 +14,4 @@ This bot is expected to have the Presence and Server Members Intent.
 - [puppeteer-lottie-cli](https://github.com/transitive-bullshit/puppeteer-lottie-cli)
 - [coro-spawn](https://luvit.io/lit.html#coro-spawn)
 - [discordia-slash](https://github.com/GitSparTV/discordia-slash)
-- [fAPI](https://fapi.dreadful.tech/)
+- [apng2gif](http://apng2gif.sourceforge.net/)
