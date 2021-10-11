@@ -457,7 +457,7 @@ local help = {}
         return pngSource
     end
 --[[ lottie2gif ]]
-    function help.lottie2gif(jsonSource, w, h)
+    function help.lottie2gif(jsonSource, w, h) -- this is a complex mess
         local tmpdir = path.resolve(uv.os_tmpdir(),'lottie_'..os.time())
         local _in = path.resolve(tmpdir,"src.json")
         local out = path.resolve(tmpdir,"out.gif")
@@ -484,6 +484,8 @@ local help = {}
 
         assert(spawn(config.paths.gifski, {args = imgs})).waitExit()
         local gifSource = assert(fs.readFileSync(out))
+        for i, v in pairs(fs.readdirSync(tmpdir)) do fs.unlink(path.resolve(tmpdir,v)) end
+        fs.rmdir(tmpdir)
         return gifSource
     end
 --[[ codepoint ]]
