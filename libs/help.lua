@@ -100,6 +100,7 @@ local help = {}
     end
 --[[ getNick ]]
     function help.getNick(user, channel)
+        if not user then return nil end
         local member = channel.guild and channel.guild._members:get(user.id)
         if member then
             return member.name
@@ -457,18 +458,32 @@ local help = {}
     end
 --[[ lottie2gif ]]
     function help.lottie2gif(jsonSource, w, h)
-        local tmp = os.tmpname()
-        local out = tmp..'.gif'
-        fs.writeFileSync(tmp, jsonSource)
-        assert(spawn(config.paths.puppeteer_lottie,{args = {
-            '-i', tmp,
-            '-o', out,
-            '-w', tostring(math.clamp(w or 160, 10, 1024)),
-            '-h', tostring(math.clamp(w or 160, 10, 1024))
+        local tmpdir = path.resolve(uv.os_tmpdir(),'lottie_'..os.time())
+        local _in = path.resolve(tmpdir,"src.json")
+        local out = path.resolve(tmpdir,"out.gif")
+        local img = path.resolve(tmpdir,"img")
+        fs.mkdirSync(tmpdir)
+        fs.writeFileSync(_in, jsonSource)
+        assert(spawn(config.paths.lottieconverter, {args = {
+            _in,
+            img,
+            'pngs',
+            tostring(math.clamp(w or 160, 10, 240))..'x'..tostring(math.clamp(w or 160, 10, 240)),
+            '20'
         }})).waitExit()
-        local gifSource = fs.readFileSync(out)
-        fs.unlink(tmp)
-        fs.unlink(out)
+
+        local imgs = fs.readdirSync(tmpdir)
+        imgs[table.search(imgs,'src.json')] = nil
+
+        for i, v in pairs(imgs) do
+            imgs[i] = path.resolve(tmpdir,v)
+        end
+
+        table.insert(imgs, '-o')
+        table.insert(imgs, out)
+
+        assert(spawn(config.paths.gifski, {args = imgs})).waitExit()
+        local gifSource = assert(fs.readFileSync(out))
         return gifSource
     end
 --[[ codepoint ]]
