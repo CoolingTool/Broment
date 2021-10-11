@@ -429,13 +429,11 @@ local help = {}
 --[[ apng2gif ]]
     function help.apng2gif(apngSource)
         local tmp = os.tmpname()
+        local out = tmp..'.gif'
         fs.writeFileSync(tmp, apngSource)
-        assert(spawn(config.paths.apng2gif, {args = {
-            tmp,
-            tmp,
-        }})).waitExit()
-        local gifSource = fs.readFileSync(tmp)
-        fs.unlink(tmp)
+        assert(spawn(config.paths.apng2gif, {args = {tmp}})).waitExit()
+        local gifSource = fs.readFileSync(out)
+        fs.unlink(tmp); fs.unlink(out)
         return gifSource
     end
 --[[ svg2png ]]
