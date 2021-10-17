@@ -9,8 +9,6 @@ emoji_server_id=""
 [paths]
 ; The path for apng2gif used for help.apng2gif 
 apng2gif=./misc/apng2gif
-; The path for Inkscape used for help.svg2png
-inkscape=%programfiles%\Inkscape\bin\inkscape.com
 ; The path for lottieconverter used for help.lottie2gif
 lottieconverter=./misc/lottieconverter
 ; The path for gifski used for help.lottie2gif
