@@ -469,7 +469,7 @@ local help = {}
             img,
             'pngs',
             tostring(math.clamp(w or 160, 10, 240))..'x'..tostring(math.clamp(w or 160, 10, 240)),
-            '24'
+            '36'
         }})).waitExit()
 
         local imgs = fs.readdirSync(tmpdir)
@@ -480,7 +480,7 @@ local help = {}
         end
 
         table.insert(imgs, '-r')
-        table.insert(imgs, '24')
+        table.insert(imgs, '36')
         table.insert(imgs, '-o')
         table.insert(imgs, out)
 
