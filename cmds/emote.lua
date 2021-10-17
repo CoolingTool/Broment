@@ -36,15 +36,15 @@ function emote:run(param, perms)
         local success, res, svgSource
         for i = 1, 2 do
             if i == 2 then 
-                query = e[query]
+                query = e[query] -- is the name of this emoji known
                 if not query then return nil, 'not an emoji' end 
             end
-            link = help.twemoji(query, {size = 'svg', ext = '.svg'})
+            link = help.twemoji(query, {size = 'svg', ext = '.svg'}) -- convert emoji into hex then link
 
             success, res, svgSource = pcall(http.request, 'GET', link)
 
             if not success then return nil, 'had an oopsie' end
-            if res.code == 200 then break end
+            if res.code == 200 then break end -- not emoji might be name of one
         end
         
         filename, source = 'emoji.png', help.svg2png(svgSource, 512, 512)

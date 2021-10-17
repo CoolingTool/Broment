@@ -10,7 +10,7 @@ This bot is expected to have the Presence and Server Members Intent.
 
 # Dependencies
 
-- [Inkscape](https://inkscape.org/)
+- [lua-vips](https://github.com/libvips/lua-vips) <h6>run `luarocks install lua-vips --local` then `$(luarocks path)`. make sure to have libvips installed</h6>
 - [lottieconverter](https://github.com/sot-tech/LottieConverter)
 - [gifski](https://gif.ski/)
 - [coro-spawn](https://luvit.io/lit.html#coro-spawn)

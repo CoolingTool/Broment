@@ -352,6 +352,13 @@
     },
     {
       "names": [
+        "face_exhaling"
+      ],
+      "surrogates": "😮‍💨",
+      "unicodeVersion": 13.1
+    },
+    {
+      "names": [
         "angry"
       ],
       "surrogates": "😠",
@@ -384,6 +391,13 @@
       ],
       "surrogates": "😳",
       "unicodeVersion": 6
+    },
+    {
+      "names": [
+        "face_in_clouds"
+      ],
+      "surrogates": "😶‍🌫️",
+      "unicodeVersion": 13.1
     },
     {
       "names": [
@@ -578,6 +592,13 @@
       ],
       "surrogates": "😵",
       "unicodeVersion": 6
+    },
+    {
+      "names": [
+        "face_with_spiral_eyes"
+      ],
+      "surrogates": "😵‍💫",
+      "unicodeVersion": 13.1
     },
     {
       "names": [
@@ -3194,13 +3215,6 @@
     },
     {
       "names": [
-        "bone"
-      ],
-      "surrogates": "🦴",
-      "unicodeVersion": 11
-    },
-    {
-      "names": [
         "tongue"
       ],
       "surrogates": "👅",
@@ -3447,6 +3461,13 @@
       ],
       "surrogates": "🫁",
       "unicodeVersion": 13
+    },
+    {
+      "names": [
+        "bone"
+      ],
+      "surrogates": "🦴",
+      "unicodeVersion": 11
     },
     {
       "names": [
@@ -5056,6 +5077,146 @@
           ],
           "surrogates": "🧔🏿",
           "unicodeVersion": 10,
+          "diversity": [
+            "1f3ff"
+          ],
+          "hasDiversityParent": true
+        }
+      ]
+    },
+    {
+      "names": [
+        "man_beard"
+      ],
+      "surrogates": "🧔‍♂️",
+      "unicodeVersion": 13.1,
+      "hasDiversity": true,
+      "diversityChildren": [
+        {
+          "names": [
+            "man_tone1_beard",
+            "man_light_skin_tone_beard"
+          ],
+          "surrogates": "🧔🏻‍♂️",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb"
+          ],
+          "hasDiversityParent": true
+        },
+        {
+          "names": [
+            "man_tone2_beard",
+            "man_medium_light_skin_tone_beard"
+          ],
+          "surrogates": "🧔🏼‍♂️",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc"
+          ],
+          "hasDiversityParent": true
+        },
+        {
+          "names": [
+            "man_tone3_beard",
+            "man_medium_skin_tone_beard"
+          ],
+          "surrogates": "🧔🏽‍♂️",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd"
+          ],
+          "hasDiversityParent": true
+        },
+        {
+          "names": [
+            "man_tone4_beard",
+            "man_medium_dark_skin_tone_beard"
+          ],
+          "surrogates": "🧔🏾‍♂️",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe"
+          ],
+          "hasDiversityParent": true
+        },
+        {
+          "names": [
+            "man_tone5_beard",
+            "man_dark_skin_tone_beard"
+          ],
+          "surrogates": "🧔🏿‍♂️",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff"
+          ],
+          "hasDiversityParent": true
+        }
+      ]
+    },
+    {
+      "names": [
+        "woman_beard"
+      ],
+      "surrogates": "🧔‍♀️",
+      "unicodeVersion": 13.1,
+      "hasDiversity": true,
+      "diversityChildren": [
+        {
+          "names": [
+            "woman_tone1_beard",
+            "woman_light_skin_tone_beard"
+          ],
+          "surrogates": "🧔🏻‍♀️",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb"
+          ],
+          "hasDiversityParent": true
+        },
+        {
+          "names": [
+            "woman_tone2_beard",
+            "woman_medium_light_skin_tone_beard"
+          ],
+          "surrogates": "🧔🏼‍♀️",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc"
+          ],
+          "hasDiversityParent": true
+        },
+        {
+          "names": [
+            "woman_tone3_beard",
+            "woman_medium_skin_tone_beard"
+          ],
+          "surrogates": "🧔🏽‍♀️",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd"
+          ],
+          "hasDiversityParent": true
+        },
+        {
+          "names": [
+            "woman_tone4_beard",
+            "woman_medium_dark_skin_tone_beard"
+          ],
+          "surrogates": "🧔🏾‍♀️",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe"
+          ],
+          "hasDiversityParent": true
+        },
+        {
+          "names": [
+            "woman_tone5_beard",
+            "woman_dark_skin_tone_beard"
+          ],
+          "surrogates": "🧔🏿‍♀️",
+          "unicodeVersion": 13.1,
           "diversity": [
             "1f3ff"
           ],
@@ -17158,7 +17319,6 @@
       ],
       "surrogates": "🧑‍🤝‍🧑",
       "unicodeVersion": 12,
-      "hasMultiDiversity": true,
       "diversityChildren": [
         {
           "names": [
@@ -17232,8 +17392,8 @@
           "surrogates": "🧑🏼‍🤝‍🧑🏻",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fb",
-            "1f3fc"
+            "1f3fc",
+            "1f3fb"
           ],
           "hasMultiDiversityParent": true
         },
@@ -17296,8 +17456,8 @@
           "surrogates": "🧑🏽‍🤝‍🧑🏻",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fb",
-            "1f3fd"
+            "1f3fd",
+            "1f3fb"
           ],
           "hasMultiDiversityParent": true
         },
@@ -17309,8 +17469,8 @@
           "surrogates": "🧑🏽‍🤝‍🧑🏼",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fc",
-            "1f3fd"
+            "1f3fd",
+            "1f3fc"
           ],
           "hasMultiDiversityParent": true
         },
@@ -17360,8 +17520,8 @@
           "surrogates": "🧑🏾‍🤝‍🧑🏻",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fb",
-            "1f3fe"
+            "1f3fe",
+            "1f3fb"
           ],
           "hasMultiDiversityParent": true
         },
@@ -17373,8 +17533,8 @@
           "surrogates": "🧑🏾‍🤝‍🧑🏼",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fc",
-            "1f3fe"
+            "1f3fe",
+            "1f3fc"
           ],
           "hasMultiDiversityParent": true
         },
@@ -17386,8 +17546,8 @@
           "surrogates": "🧑🏾‍🤝‍🧑🏽",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fd",
-            "1f3fe"
+            "1f3fe",
+            "1f3fd"
           ],
           "hasMultiDiversityParent": true
         },
@@ -17424,8 +17584,8 @@
           "surrogates": "🧑🏿‍🤝‍🧑🏻",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fb",
-            "1f3ff"
+            "1f3ff",
+            "1f3fb"
           ],
           "hasMultiDiversityParent": true
         },
@@ -17437,8 +17597,8 @@
           "surrogates": "🧑🏿‍🤝‍🧑🏼",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fc",
-            "1f3ff"
+            "1f3ff",
+            "1f3fc"
           ],
           "hasMultiDiversityParent": true
         },
@@ -17450,8 +17610,8 @@
           "surrogates": "🧑🏿‍🤝‍🧑🏽",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fd",
-            "1f3ff"
+            "1f3ff",
+            "1f3fd"
           ],
           "hasMultiDiversityParent": true
         },
@@ -17463,8 +17623,8 @@
           "surrogates": "🧑🏿‍🤝‍🧑🏾",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fe",
-            "1f3ff"
+            "1f3ff",
+            "1f3fe"
           ],
           "hasMultiDiversityParent": true
         },
@@ -17480,7 +17640,8 @@
           ],
           "hasMultiDiversityParent": true
         }
-      ]
+      ],
+      "hasMultiDiversity": true
     },
     {
       "names": [
@@ -17488,7 +17649,6 @@
       ],
       "surrogates": "👫",
       "unicodeVersion": 6,
-      "hasMultiDiversity": true,
       "diversityChildren": [
         {
           "names": [
@@ -17562,8 +17722,8 @@
           "surrogates": "👩🏼‍🤝‍👨🏻",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fb",
-            "1f3fc"
+            "1f3fc",
+            "1f3fb"
           ],
           "hasMultiDiversityParent": true
         },
@@ -17626,8 +17786,8 @@
           "surrogates": "👩🏽‍🤝‍👨🏻",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fb",
-            "1f3fd"
+            "1f3fd",
+            "1f3fb"
           ],
           "hasMultiDiversityParent": true
         },
@@ -17639,8 +17799,8 @@
           "surrogates": "👩🏽‍🤝‍👨🏼",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fc",
-            "1f3fd"
+            "1f3fd",
+            "1f3fc"
           ],
           "hasMultiDiversityParent": true
         },
@@ -17690,8 +17850,8 @@
           "surrogates": "👩🏾‍🤝‍👨🏻",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fb",
-            "1f3fe"
+            "1f3fe",
+            "1f3fb"
           ],
           "hasMultiDiversityParent": true
         },
@@ -17703,8 +17863,8 @@
           "surrogates": "👩🏾‍🤝‍👨🏼",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fc",
-            "1f3fe"
+            "1f3fe",
+            "1f3fc"
           ],
           "hasMultiDiversityParent": true
         },
@@ -17716,8 +17876,8 @@
           "surrogates": "👩🏾‍🤝‍👨🏽",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fd",
-            "1f3fe"
+            "1f3fe",
+            "1f3fd"
           ],
           "hasMultiDiversityParent": true
         },
@@ -17754,8 +17914,8 @@
           "surrogates": "👩🏿‍🤝‍👨🏻",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fb",
-            "1f3ff"
+            "1f3ff",
+            "1f3fb"
           ],
           "hasMultiDiversityParent": true
         },
@@ -17767,8 +17927,8 @@
           "surrogates": "👩🏿‍🤝‍👨🏼",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fc",
-            "1f3ff"
+            "1f3ff",
+            "1f3fc"
           ],
           "hasMultiDiversityParent": true
         },
@@ -17780,8 +17940,8 @@
           "surrogates": "👩🏿‍🤝‍👨🏽",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fd",
-            "1f3ff"
+            "1f3ff",
+            "1f3fd"
           ],
           "hasMultiDiversityParent": true
         },
@@ -17793,8 +17953,8 @@
           "surrogates": "👩🏿‍🤝‍👨🏾",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fe",
-            "1f3ff"
+            "1f3ff",
+            "1f3fe"
           ],
           "hasMultiDiversityParent": true
         },
@@ -17810,7 +17970,8 @@
           ],
           "hasMultiDiversityParent": true
         }
-      ]
+      ],
+      "hasMultiDiversity": true
     },
     {
       "names": [
@@ -17818,7 +17979,6 @@
       ],
       "surrogates": "👭",
       "unicodeVersion": 6,
-      "hasMultiDiversity": true,
       "diversityChildren": [
         {
           "names": [
@@ -17892,8 +18052,8 @@
           "surrogates": "👩🏼‍🤝‍👩🏻",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fb",
-            "1f3fc"
+            "1f3fc",
+            "1f3fb"
           ],
           "hasMultiDiversityParent": true
         },
@@ -17956,8 +18116,8 @@
           "surrogates": "👩🏽‍🤝‍👩🏻",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fb",
-            "1f3fd"
+            "1f3fd",
+            "1f3fb"
           ],
           "hasMultiDiversityParent": true
         },
@@ -17969,8 +18129,8 @@
           "surrogates": "👩🏽‍🤝‍👩🏼",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fc",
-            "1f3fd"
+            "1f3fd",
+            "1f3fc"
           ],
           "hasMultiDiversityParent": true
         },
@@ -18020,8 +18180,8 @@
           "surrogates": "👩🏾‍🤝‍👩🏻",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fb",
-            "1f3fe"
+            "1f3fe",
+            "1f3fb"
           ],
           "hasMultiDiversityParent": true
         },
@@ -18033,8 +18193,8 @@
           "surrogates": "👩🏾‍🤝‍👩🏼",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fc",
-            "1f3fe"
+            "1f3fe",
+            "1f3fc"
           ],
           "hasMultiDiversityParent": true
         },
@@ -18046,8 +18206,8 @@
           "surrogates": "👩🏾‍🤝‍👩🏽",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fd",
-            "1f3fe"
+            "1f3fe",
+            "1f3fd"
           ],
           "hasMultiDiversityParent": true
         },
@@ -18084,8 +18244,8 @@
           "surrogates": "👩🏿‍🤝‍👩🏻",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fb",
-            "1f3ff"
+            "1f3ff",
+            "1f3fb"
           ],
           "hasMultiDiversityParent": true
         },
@@ -18097,8 +18257,8 @@
           "surrogates": "👩🏿‍🤝‍👩🏼",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fc",
-            "1f3ff"
+            "1f3ff",
+            "1f3fc"
           ],
           "hasMultiDiversityParent": true
         },
@@ -18110,8 +18270,8 @@
           "surrogates": "👩🏿‍🤝‍👩🏽",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fd",
-            "1f3ff"
+            "1f3ff",
+            "1f3fd"
           ],
           "hasMultiDiversityParent": true
         },
@@ -18123,8 +18283,8 @@
           "surrogates": "👩🏿‍🤝‍👩🏾",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fe",
-            "1f3ff"
+            "1f3ff",
+            "1f3fe"
           ],
           "hasMultiDiversityParent": true
         },
@@ -18140,7 +18300,8 @@
           ],
           "hasMultiDiversityParent": true
         }
-      ]
+      ],
+      "hasMultiDiversity": true
     },
     {
       "names": [
@@ -18148,7 +18309,6 @@
       ],
       "surrogates": "👬",
       "unicodeVersion": 6,
-      "hasMultiDiversity": true,
       "diversityChildren": [
         {
           "names": [
@@ -18222,8 +18382,8 @@
           "surrogates": "👨🏼‍🤝‍👨🏻",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fb",
-            "1f3fc"
+            "1f3fc",
+            "1f3fb"
           ],
           "hasMultiDiversityParent": true
         },
@@ -18286,8 +18446,8 @@
           "surrogates": "👨🏽‍🤝‍👨🏻",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fb",
-            "1f3fd"
+            "1f3fd",
+            "1f3fb"
           ],
           "hasMultiDiversityParent": true
         },
@@ -18299,8 +18459,8 @@
           "surrogates": "👨🏽‍🤝‍👨🏼",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fc",
-            "1f3fd"
+            "1f3fd",
+            "1f3fc"
           ],
           "hasMultiDiversityParent": true
         },
@@ -18350,8 +18510,8 @@
           "surrogates": "👨🏾‍🤝‍👨🏻",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fb",
-            "1f3fe"
+            "1f3fe",
+            "1f3fb"
           ],
           "hasMultiDiversityParent": true
         },
@@ -18363,8 +18523,8 @@
           "surrogates": "👨🏾‍🤝‍👨🏼",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fc",
-            "1f3fe"
+            "1f3fe",
+            "1f3fc"
           ],
           "hasMultiDiversityParent": true
         },
@@ -18376,8 +18536,8 @@
           "surrogates": "👨🏾‍🤝‍👨🏽",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fd",
-            "1f3fe"
+            "1f3fe",
+            "1f3fd"
           ],
           "hasMultiDiversityParent": true
         },
@@ -18414,8 +18574,8 @@
           "surrogates": "👨🏿‍🤝‍👨🏻",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fb",
-            "1f3ff"
+            "1f3ff",
+            "1f3fb"
           ],
           "hasMultiDiversityParent": true
         },
@@ -18427,8 +18587,8 @@
           "surrogates": "👨🏿‍🤝‍👨🏼",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fc",
-            "1f3ff"
+            "1f3ff",
+            "1f3fc"
           ],
           "hasMultiDiversityParent": true
         },
@@ -18440,8 +18600,8 @@
           "surrogates": "👨🏿‍🤝‍👨🏽",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fd",
-            "1f3ff"
+            "1f3ff",
+            "1f3fd"
           ],
           "hasMultiDiversityParent": true
         },
@@ -18453,8 +18613,8 @@
           "surrogates": "👨🏿‍🤝‍👨🏾",
           "unicodeVersion": 12,
           "diversity": [
-            "1f3fe",
-            "1f3ff"
+            "1f3ff",
+            "1f3fe"
           ],
           "hasMultiDiversityParent": true
         },
@@ -18470,21 +18630,668 @@
           ],
           "hasMultiDiversityParent": true
         }
-      ]
+      ],
+      "hasMultiDiversity": true
     },
     {
       "names": [
         "couple_with_heart"
       ],
       "surrogates": "💑",
-      "unicodeVersion": 6
+      "unicodeVersion": 6,
+      "diversityChildren": [
+        {
+          "names": [
+            "couple_with_heart_tone1",
+            "couple_with_heart_light_skin_tone"
+          ],
+          "surrogates": "💑🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_person_person_tone1_tone2",
+            "couple_with_heart_person_person_light_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "🧑🏻‍❤️‍🧑🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_person_person_tone1_tone3",
+            "couple_with_heart_person_person_light_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "🧑🏻‍❤️‍🧑🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_person_person_tone1_tone4",
+            "couple_with_heart_person_person_light_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "🧑🏻‍❤️‍🧑🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_person_person_tone1_tone5",
+            "couple_with_heart_person_person_light_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "🧑🏻‍❤️‍🧑🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_person_person_tone2_tone1",
+            "couple_with_heart_person_person_medium_light_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "🧑🏼‍❤️‍🧑🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_tone2",
+            "couple_with_heart_medium_light_skin_tone"
+          ],
+          "surrogates": "💑🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_person_person_tone2_tone3",
+            "couple_with_heart_person_person_medium_light_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "🧑🏼‍❤️‍🧑🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_person_person_tone2_tone4",
+            "couple_with_heart_person_person_medium_light_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "🧑🏼‍❤️‍🧑🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_person_person_tone2_tone5",
+            "couple_with_heart_person_person_medium_light_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "🧑🏼‍❤️‍🧑🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_person_person_tone3_tone1",
+            "couple_with_heart_person_person_medium_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "🧑🏽‍❤️‍🧑🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_person_person_tone3_tone2",
+            "couple_with_heart_person_person_medium_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "🧑🏽‍❤️‍🧑🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_tone3",
+            "couple_with_heart_medium_skin_tone"
+          ],
+          "surrogates": "💑🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_person_person_tone3_tone4",
+            "couple_with_heart_person_person_medium_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "🧑🏽‍❤️‍🧑🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_person_person_tone3_tone5",
+            "couple_with_heart_person_person_medium_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "🧑🏽‍❤️‍🧑🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_person_person_tone4_tone1",
+            "couple_with_heart_person_person_medium_dark_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "🧑🏾‍❤️‍🧑🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_person_person_tone4_tone2",
+            "couple_with_heart_person_person_medium_dark_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "🧑🏾‍❤️‍🧑🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_person_person_tone4_tone3",
+            "couple_with_heart_person_person_medium_dark_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "🧑🏾‍❤️‍🧑🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_tone4",
+            "couple_with_heart_medium_dark_skin_tone"
+          ],
+          "surrogates": "💑🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_person_person_tone4_tone5",
+            "couple_with_heart_person_person_medium_dark_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "🧑🏾‍❤️‍🧑🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_person_person_tone5_tone1",
+            "couple_with_heart_person_person_dark_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "🧑🏿‍❤️‍🧑🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_person_person_tone5_tone2",
+            "couple_with_heart_person_person_dark_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "🧑🏿‍❤️‍🧑🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_person_person_tone5_tone3",
+            "couple_with_heart_person_person_dark_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "🧑🏿‍❤️‍🧑🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_person_person_tone5_tone4",
+            "couple_with_heart_person_person_dark_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "🧑🏿‍❤️‍🧑🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_tone5",
+            "couple_with_heart_dark_skin_tone"
+          ],
+          "surrogates": "💑🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        }
+      ],
+      "hasMultiDiversity": true
     },
     {
       "names": [
         "couple_with_heart_woman_man"
       ],
       "surrogates": "👩‍❤️‍👨",
-      "unicodeVersion": 6
+      "unicodeVersion": 6,
+      "diversityChildren": [
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone1",
+            "couple_with_heart_woman_man_light_skin_tone"
+          ],
+          "surrogates": "👩🏻‍❤️‍👨🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone1_tone2",
+            "couple_with_heart_woman_man_light_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👩🏻‍❤️‍👨🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone1_tone3",
+            "couple_with_heart_woman_man_light_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👩🏻‍❤️‍👨🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone1_tone4",
+            "couple_with_heart_woman_man_light_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👩🏻‍❤️‍👨🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone1_tone5",
+            "couple_with_heart_woman_man_light_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👩🏻‍❤️‍👨🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone2_tone1",
+            "couple_with_heart_woman_man_medium_light_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👩🏼‍❤️‍👨🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone2",
+            "couple_with_heart_woman_man_medium_light_skin_tone"
+          ],
+          "surrogates": "👩🏼‍❤️‍👨🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone2_tone3",
+            "couple_with_heart_woman_man_medium_light_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👩🏼‍❤️‍👨🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone2_tone4",
+            "couple_with_heart_woman_man_medium_light_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👩🏼‍❤️‍👨🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone2_tone5",
+            "couple_with_heart_woman_man_medium_light_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👩🏼‍❤️‍👨🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone3_tone1",
+            "couple_with_heart_woman_man_medium_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👩🏽‍❤️‍👨🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone3_tone2",
+            "couple_with_heart_woman_man_medium_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👩🏽‍❤️‍👨🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone3",
+            "couple_with_heart_woman_man_medium_skin_tone"
+          ],
+          "surrogates": "👩🏽‍❤️‍👨🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone3_tone4",
+            "couple_with_heart_woman_man_medium_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👩🏽‍❤️‍👨🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone3_tone5",
+            "couple_with_heart_woman_man_medium_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👩🏽‍❤️‍👨🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone4_tone1",
+            "couple_with_heart_woman_man_medium_dark_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👩🏾‍❤️‍👨🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone4_tone2",
+            "couple_with_heart_woman_man_medium_dark_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👩🏾‍❤️‍👨🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone4_tone3",
+            "couple_with_heart_woman_man_medium_dark_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👩🏾‍❤️‍👨🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone4",
+            "couple_with_heart_woman_man_medium_dark_skin_tone"
+          ],
+          "surrogates": "👩🏾‍❤️‍👨🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone4_tone5",
+            "couple_with_heart_woman_man_medium_dark_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👩🏾‍❤️‍👨🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone5_tone1",
+            "couple_with_heart_woman_man_dark_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👩🏿‍❤️‍👨🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone5_tone2",
+            "couple_with_heart_woman_man_dark_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👩🏿‍❤️‍👨🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone5_tone3",
+            "couple_with_heart_woman_man_dark_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👩🏿‍❤️‍👨🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone5_tone4",
+            "couple_with_heart_woman_man_dark_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👩🏿‍❤️‍👨🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_man_tone5",
+            "couple_with_heart_woman_man_dark_skin_tone"
+          ],
+          "surrogates": "👩🏿‍❤️‍👨🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        }
+      ],
+      "hasMultiDiversity": true
     },
     {
       "names": [
@@ -18492,7 +19299,330 @@
         "couple_with_heart_ww"
       ],
       "surrogates": "👩‍❤️‍👩",
-      "unicodeVersion": 6
+      "unicodeVersion": 6,
+      "diversityChildren": [
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone1",
+            "couple_with_heart_woman_woman_light_skin_tone"
+          ],
+          "surrogates": "👩🏻‍❤️‍👩🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone1_tone2",
+            "couple_with_heart_woman_woman_light_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👩🏻‍❤️‍👩🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone1_tone3",
+            "couple_with_heart_woman_woman_light_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👩🏻‍❤️‍👩🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone1_tone4",
+            "couple_with_heart_woman_woman_light_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👩🏻‍❤️‍👩🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone1_tone5",
+            "couple_with_heart_woman_woman_light_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👩🏻‍❤️‍👩🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone2_tone1",
+            "couple_with_heart_woman_woman_medium_light_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👩🏼‍❤️‍👩🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone2",
+            "couple_with_heart_woman_woman_medium_light_skin_tone"
+          ],
+          "surrogates": "👩🏼‍❤️‍👩🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone2_tone3",
+            "couple_with_heart_woman_woman_medium_light_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👩🏼‍❤️‍👩🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone2_tone4",
+            "couple_with_heart_woman_woman_medium_light_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👩🏼‍❤️‍👩🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone2_tone5",
+            "couple_with_heart_woman_woman_medium_light_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👩🏼‍❤️‍👩🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone3_tone1",
+            "couple_with_heart_woman_woman_medium_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👩🏽‍❤️‍👩🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone3_tone2",
+            "couple_with_heart_woman_woman_medium_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👩🏽‍❤️‍👩🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone3",
+            "couple_with_heart_woman_woman_medium_skin_tone"
+          ],
+          "surrogates": "👩🏽‍❤️‍👩🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone3_tone4",
+            "couple_with_heart_woman_woman_medium_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👩🏽‍❤️‍👩🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone3_tone5",
+            "couple_with_heart_woman_woman_medium_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👩🏽‍❤️‍👩🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone4_tone1",
+            "couple_with_heart_woman_woman_medium_dark_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👩🏾‍❤️‍👩🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone4_tone2",
+            "couple_with_heart_woman_woman_medium_dark_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👩🏾‍❤️‍👩🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone4_tone3",
+            "couple_with_heart_woman_woman_medium_dark_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👩🏾‍❤️‍👩🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone4",
+            "couple_with_heart_woman_woman_medium_dark_skin_tone"
+          ],
+          "surrogates": "👩🏾‍❤️‍👩🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone4_tone5",
+            "couple_with_heart_woman_woman_medium_dark_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👩🏾‍❤️‍👩🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone5_tone1",
+            "couple_with_heart_woman_woman_dark_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👩🏿‍❤️‍👩🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone5_tone2",
+            "couple_with_heart_woman_woman_dark_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👩🏿‍❤️‍👩🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone5_tone3",
+            "couple_with_heart_woman_woman_dark_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👩🏿‍❤️‍👩🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone5_tone4",
+            "couple_with_heart_woman_woman_dark_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👩🏿‍❤️‍👩🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_woman_woman_tone5",
+            "couple_with_heart_woman_woman_dark_skin_tone"
+          ],
+          "surrogates": "👩🏿‍❤️‍👩🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        }
+      ],
+      "hasMultiDiversity": true
     },
     {
       "names": [
@@ -18500,21 +19630,990 @@
         "couple_with_heart_mm"
       ],
       "surrogates": "👨‍❤️‍👨",
-      "unicodeVersion": 6
+      "unicodeVersion": 6,
+      "diversityChildren": [
+        {
+          "names": [
+            "couple_with_heart_man_man_tone1",
+            "couple_with_heart_man_man_light_skin_tone"
+          ],
+          "surrogates": "👨🏻‍❤️‍👨🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone1_tone2",
+            "couple_with_heart_man_man_light_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👨🏻‍❤️‍👨🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone1_tone3",
+            "couple_with_heart_man_man_light_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👨🏻‍❤️‍👨🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone1_tone4",
+            "couple_with_heart_man_man_light_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👨🏻‍❤️‍👨🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone1_tone5",
+            "couple_with_heart_man_man_light_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👨🏻‍❤️‍👨🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone2_tone1",
+            "couple_with_heart_man_man_medium_light_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👨🏼‍❤️‍👨🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone2",
+            "couple_with_heart_man_man_medium_light_skin_tone"
+          ],
+          "surrogates": "👨🏼‍❤️‍👨🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone2_tone3",
+            "couple_with_heart_man_man_medium_light_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👨🏼‍❤️‍👨🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone2_tone4",
+            "couple_with_heart_man_man_medium_light_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👨🏼‍❤️‍👨🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone2_tone5",
+            "couple_with_heart_man_man_medium_light_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👨🏼‍❤️‍👨🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone3_tone1",
+            "couple_with_heart_man_man_medium_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👨🏽‍❤️‍👨🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone3_tone2",
+            "couple_with_heart_man_man_medium_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👨🏽‍❤️‍👨🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone3",
+            "couple_with_heart_man_man_medium_skin_tone"
+          ],
+          "surrogates": "👨🏽‍❤️‍👨🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone3_tone4",
+            "couple_with_heart_man_man_medium_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👨🏽‍❤️‍👨🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone3_tone5",
+            "couple_with_heart_man_man_medium_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👨🏽‍❤️‍👨🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone4_tone1",
+            "couple_with_heart_man_man_medium_dark_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👨🏾‍❤️‍👨🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone4_tone2",
+            "couple_with_heart_man_man_medium_dark_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👨🏾‍❤️‍👨🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone4_tone3",
+            "couple_with_heart_man_man_medium_dark_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👨🏾‍❤️‍👨🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone4",
+            "couple_with_heart_man_man_medium_dark_skin_tone"
+          ],
+          "surrogates": "👨🏾‍❤️‍👨🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone4_tone5",
+            "couple_with_heart_man_man_medium_dark_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👨🏾‍❤️‍👨🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone5_tone1",
+            "couple_with_heart_man_man_dark_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👨🏿‍❤️‍👨🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone5_tone2",
+            "couple_with_heart_man_man_dark_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👨🏿‍❤️‍👨🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone5_tone3",
+            "couple_with_heart_man_man_dark_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👨🏿‍❤️‍👨🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone5_tone4",
+            "couple_with_heart_man_man_dark_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👨🏿‍❤️‍👨🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "couple_with_heart_man_man_tone5",
+            "couple_with_heart_man_man_dark_skin_tone"
+          ],
+          "surrogates": "👨🏿‍❤️‍👨🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        }
+      ],
+      "hasMultiDiversity": true
     },
     {
       "names": [
         "couplekiss"
       ],
       "surrogates": "💏",
-      "unicodeVersion": 6
+      "unicodeVersion": 6,
+      "diversityChildren": [
+        {
+          "names": [
+            "kiss_person_person_tone5_tone4",
+            "kiss_person_person_dark_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "🧑🏿‍❤️‍💋‍🧑🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_tone1",
+            "kiss_light_skin_tone"
+          ],
+          "surrogates": "💏🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_person_person_tone1_tone2",
+            "kiss_person_person_light_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "🧑🏻‍❤️‍💋‍🧑🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_person_person_tone1_tone3",
+            "kiss_person_person_light_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "🧑🏻‍❤️‍💋‍🧑🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_person_person_tone1_tone4",
+            "kiss_person_person_light_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "🧑🏻‍❤️‍💋‍🧑🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_person_person_tone1_tone5",
+            "kiss_person_person_light_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "🧑🏻‍❤️‍💋‍🧑🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_person_person_tone2_tone1",
+            "kiss_person_person_medium_light_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "🧑🏼‍❤️‍💋‍🧑🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_tone2",
+            "kiss_medium_light_skin_tone"
+          ],
+          "surrogates": "💏🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_person_person_tone2_tone3",
+            "kiss_person_person_medium_light_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "🧑🏼‍❤️‍💋‍🧑🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_person_person_tone2_tone4",
+            "kiss_person_person_medium_light_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "🧑🏼‍❤️‍💋‍🧑🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_person_person_tone2_tone5",
+            "kiss_person_person_medium_light_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "🧑🏼‍❤️‍💋‍🧑🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_person_person_tone3_tone1",
+            "kiss_person_person_medium_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "🧑🏽‍❤️‍💋‍🧑🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_person_person_tone3_tone2",
+            "kiss_person_person_medium_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "🧑🏽‍❤️‍💋‍🧑🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_tone3",
+            "kiss_medium_skin_tone"
+          ],
+          "surrogates": "💏🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_person_person_tone3_tone4",
+            "kiss_person_person_medium_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "🧑🏽‍❤️‍💋‍🧑🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_person_person_tone3_tone5",
+            "kiss_person_person_medium_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "🧑🏽‍❤️‍💋‍🧑🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_person_person_tone4_tone1",
+            "kiss_person_person_medium_dark_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "🧑🏾‍❤️‍💋‍🧑🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_person_person_tone4_tone2",
+            "kiss_person_person_medium_dark_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "🧑🏾‍❤️‍💋‍🧑🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_person_person_tone4_tone3",
+            "kiss_person_person_medium_dark_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "🧑🏾‍❤️‍💋‍🧑🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_tone4",
+            "kiss_medium_dark_skin_tone"
+          ],
+          "surrogates": "💏🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_person_person_tone4_tone5",
+            "kiss_person_person_medium_dark_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "🧑🏾‍❤️‍💋‍🧑🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_person_person_tone5_tone1",
+            "kiss_person_person_dark_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "🧑🏿‍❤️‍💋‍🧑🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_person_person_tone5_tone2",
+            "kiss_person_person_dark_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "🧑🏿‍❤️‍💋‍🧑🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_person_person_tone5_tone3",
+            "kiss_person_person_dark_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "🧑🏿‍❤️‍💋‍🧑🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_tone5",
+            "kiss_dark_skin_tone"
+          ],
+          "surrogates": "💏🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        }
+      ],
+      "hasMultiDiversity": true
     },
     {
       "names": [
         "kiss_woman_man"
       ],
       "surrogates": "👩‍❤️‍💋‍👨",
-      "unicodeVersion": 6
+      "unicodeVersion": 6,
+      "diversityChildren": [
+        {
+          "names": [
+            "kiss_woman_man_tone1",
+            "kiss_woman_man_light_skin_tone"
+          ],
+          "surrogates": "👩🏻‍❤️‍💋‍👨🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone1_tone2",
+            "kiss_woman_man_light_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👩🏻‍❤️‍💋‍👨🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone1_tone3",
+            "kiss_woman_man_light_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👩🏻‍❤️‍💋‍👨🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone1_tone4",
+            "kiss_woman_man_light_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👩🏻‍❤️‍💋‍👨🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone1_tone5",
+            "kiss_woman_man_light_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👩🏻‍❤️‍💋‍👨🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone2_tone1",
+            "kiss_woman_man_medium_light_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👩🏼‍❤️‍💋‍👨🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone2",
+            "kiss_woman_man_medium_light_skin_tone"
+          ],
+          "surrogates": "👩🏼‍❤️‍💋‍👨🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone2_tone3",
+            "kiss_woman_man_medium_light_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👩🏼‍❤️‍💋‍👨🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone2_tone4",
+            "kiss_woman_man_medium_light_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👩🏼‍❤️‍💋‍👨🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone2_tone5",
+            "kiss_woman_man_medium_light_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👩🏼‍❤️‍💋‍👨🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone3_tone1",
+            "kiss_woman_man_medium_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👩🏽‍❤️‍💋‍👨🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone3_tone2",
+            "kiss_woman_man_medium_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👩🏽‍❤️‍💋‍👨🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone3",
+            "kiss_woman_man_medium_skin_tone"
+          ],
+          "surrogates": "👩🏽‍❤️‍💋‍👨🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone3_tone4",
+            "kiss_woman_man_medium_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👩🏽‍❤️‍💋‍👨🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone3_tone5",
+            "kiss_woman_man_medium_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👩🏽‍❤️‍💋‍👨🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone4_tone1",
+            "kiss_woman_man_medium_dark_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👩🏾‍❤️‍💋‍👨🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone4_tone2",
+            "kiss_woman_man_medium_dark_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👩🏾‍❤️‍💋‍👨🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone4_tone3",
+            "kiss_woman_man_medium_dark_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👩🏾‍❤️‍💋‍👨🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone4",
+            "kiss_woman_man_medium_dark_skin_tone"
+          ],
+          "surrogates": "👩🏾‍❤️‍💋‍👨🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone4_tone5",
+            "kiss_woman_man_medium_dark_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👩🏾‍❤️‍💋‍👨🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone5_tone1",
+            "kiss_woman_man_dark_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👩🏿‍❤️‍💋‍👨🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone5_tone2",
+            "kiss_woman_man_dark_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👩🏿‍❤️‍💋‍👨🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone5_tone3",
+            "kiss_woman_man_dark_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👩🏿‍❤️‍💋‍👨🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone5_tone4",
+            "kiss_woman_man_dark_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👩🏿‍❤️‍💋‍👨🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_man_tone5",
+            "kiss_woman_man_dark_skin_tone"
+          ],
+          "surrogates": "👩🏿‍❤️‍💋‍👨🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        }
+      ],
+      "hasMultiDiversity": true
     },
     {
       "names": [
@@ -18522,7 +20621,330 @@
         "couplekiss_ww"
       ],
       "surrogates": "👩‍❤️‍💋‍👩",
-      "unicodeVersion": 6
+      "unicodeVersion": 6,
+      "diversityChildren": [
+        {
+          "names": [
+            "kiss_woman_woman_tone1",
+            "kiss_woman_woman_light_skin_tone"
+          ],
+          "surrogates": "👩🏻‍❤️‍💋‍👩🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone1_tone2",
+            "kiss_woman_woman_light_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👩🏻‍❤️‍💋‍👩🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone1_tone3",
+            "kiss_woman_woman_light_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👩🏻‍❤️‍💋‍👩🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone1_tone4",
+            "kiss_woman_woman_light_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👩🏻‍❤️‍💋‍👩🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone1_tone5",
+            "kiss_woman_woman_light_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👩🏻‍❤️‍💋‍👩🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone2_tone1",
+            "kiss_woman_woman_medium_light_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👩🏼‍❤️‍💋‍👩🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone2",
+            "kiss_woman_woman_medium_light_skin_tone"
+          ],
+          "surrogates": "👩🏼‍❤️‍💋‍👩🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone2_tone3",
+            "kiss_woman_woman_medium_light_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👩🏼‍❤️‍💋‍👩🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone2_tone4",
+            "kiss_woman_woman_medium_light_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👩🏼‍❤️‍💋‍👩🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone2_tone5",
+            "kiss_woman_woman_medium_light_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👩🏼‍❤️‍💋‍👩🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone3_tone1",
+            "kiss_woman_woman_medium_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👩🏽‍❤️‍💋‍👩🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone3_tone2",
+            "kiss_woman_woman_medium_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👩🏽‍❤️‍💋‍👩🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone3",
+            "kiss_woman_woman_medium_skin_tone"
+          ],
+          "surrogates": "👩🏽‍❤️‍💋‍👩🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone3_tone4",
+            "kiss_woman_woman_medium_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👩🏽‍❤️‍💋‍👩🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone3_tone5",
+            "kiss_woman_woman_medium_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👩🏽‍❤️‍💋‍👩🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone4_tone1",
+            "kiss_woman_woman_medium_dark_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👩🏾‍❤️‍💋‍👩🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone4_tone2",
+            "kiss_woman_woman_medium_dark_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👩🏾‍❤️‍💋‍👩🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone4_tone3",
+            "kiss_woman_woman_medium_dark_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👩🏾‍❤️‍💋‍👩🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone4",
+            "kiss_woman_woman_medium_dark_skin_tone"
+          ],
+          "surrogates": "👩🏾‍❤️‍💋‍👩🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone4_tone5",
+            "kiss_woman_woman_medium_dark_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👩🏾‍❤️‍💋‍👩🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone5_tone1",
+            "kiss_woman_woman_dark_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👩🏿‍❤️‍💋‍👩🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone5_tone2",
+            "kiss_woman_woman_dark_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👩🏿‍❤️‍💋‍👩🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone5_tone3",
+            "kiss_woman_woman_dark_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👩🏿‍❤️‍💋‍👩🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone5_tone4",
+            "kiss_woman_woman_dark_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👩🏿‍❤️‍💋‍👩🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_woman_woman_tone5",
+            "kiss_woman_woman_dark_skin_tone"
+          ],
+          "surrogates": "👩🏿‍❤️‍💋‍👩🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        }
+      ],
+      "hasMultiDiversity": true
     },
     {
       "names": [
@@ -18530,7 +20952,330 @@
         "couplekiss_mm"
       ],
       "surrogates": "👨‍❤️‍💋‍👨",
-      "unicodeVersion": 6
+      "unicodeVersion": 6,
+      "diversityChildren": [
+        {
+          "names": [
+            "kiss_man_man_tone1",
+            "kiss_man_man_light_skin_tone"
+          ],
+          "surrogates": "👨🏻‍❤️‍💋‍👨🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone1_tone2",
+            "kiss_man_man_light_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👨🏻‍❤️‍💋‍👨🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone1_tone3",
+            "kiss_man_man_light_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👨🏻‍❤️‍💋‍👨🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone1_tone4",
+            "kiss_man_man_light_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👨🏻‍❤️‍💋‍👨🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone1_tone5",
+            "kiss_man_man_light_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👨🏻‍❤️‍💋‍👨🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fb",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone2_tone1",
+            "kiss_man_man_medium_light_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👨🏼‍❤️‍💋‍👨🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone2",
+            "kiss_man_man_medium_light_skin_tone"
+          ],
+          "surrogates": "👨🏼‍❤️‍💋‍👨🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone2_tone3",
+            "kiss_man_man_medium_light_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👨🏼‍❤️‍💋‍👨🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone2_tone4",
+            "kiss_man_man_medium_light_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👨🏼‍❤️‍💋‍👨🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone2_tone5",
+            "kiss_man_man_medium_light_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👨🏼‍❤️‍💋‍👨🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fc",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone3_tone1",
+            "kiss_man_man_medium_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👨🏽‍❤️‍💋‍👨🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone3_tone2",
+            "kiss_man_man_medium_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👨🏽‍❤️‍💋‍👨🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone3",
+            "kiss_man_man_medium_skin_tone"
+          ],
+          "surrogates": "👨🏽‍❤️‍💋‍👨🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone3_tone4",
+            "kiss_man_man_medium_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👨🏽‍❤️‍💋‍👨🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone3_tone5",
+            "kiss_man_man_medium_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👨🏽‍❤️‍💋‍👨🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fd",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone4_tone1",
+            "kiss_man_man_medium_dark_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👨🏾‍❤️‍💋‍👨🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone4_tone2",
+            "kiss_man_man_medium_dark_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👨🏾‍❤️‍💋‍👨🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone4_tone3",
+            "kiss_man_man_medium_dark_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👨🏾‍❤️‍💋‍👨🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone4",
+            "kiss_man_man_medium_dark_skin_tone"
+          ],
+          "surrogates": "👨🏾‍❤️‍💋‍👨🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone4_tone5",
+            "kiss_man_man_medium_dark_skin_tone_dark_skin_tone"
+          ],
+          "surrogates": "👨🏾‍❤️‍💋‍👨🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3fe",
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone5_tone1",
+            "kiss_man_man_dark_skin_tone_light_skin_tone"
+          ],
+          "surrogates": "👨🏿‍❤️‍💋‍👨🏻",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fb"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone5_tone2",
+            "kiss_man_man_dark_skin_tone_medium_light_skin_tone"
+          ],
+          "surrogates": "👨🏿‍❤️‍💋‍👨🏼",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fc"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone5_tone3",
+            "kiss_man_man_dark_skin_tone_medium_skin_tone"
+          ],
+          "surrogates": "👨🏿‍❤️‍💋‍👨🏽",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fd"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone5_tone4",
+            "kiss_man_man_dark_skin_tone_medium_dark_skin_tone"
+          ],
+          "surrogates": "👨🏿‍❤️‍💋‍👨🏾",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff",
+            "1f3fe"
+          ],
+          "hasMultiDiversityParent": true
+        },
+        {
+          "names": [
+            "kiss_man_man_tone5",
+            "kiss_man_man_dark_skin_tone"
+          ],
+          "surrogates": "👨🏿‍❤️‍💋‍👨🏿",
+          "unicodeVersion": 13.1,
+          "diversity": [
+            "1f3ff"
+          ],
+          "hasMultiDiversityParent": true
+        }
+      ],
+      "hasMultiDiversity": true
     },
     {
       "names": [
@@ -27675,6 +30420,20 @@
       ],
       "surrogates": "💝",
       "unicodeVersion": 6
+    },
+    {
+      "names": [
+        "mending_heart"
+      ],
+      "surrogates": "❤️‍🩹",
+      "unicodeVersion": 13.1
+    },
+    {
+      "names": [
+        "heart_on_fire"
+      ],
+      "surrogates": "❤️‍🔥",
+      "unicodeVersion": 13.1
     },
     {
       "names": [

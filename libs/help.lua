@@ -439,21 +439,8 @@ local help = {}
     end
 --[[ svg2png ]]
     function help.svg2png(svgSource, w, h)
-        local tmp = os.tmpname()
-        local out = tmp..'.png'
-        fs.writeFileSync(tmp, svgSource)
-        assert(spawn(config.paths.inkscape, {args = {
-            '-w',
-            tostring(math.clamp(w or 1024, 10, 1024)),
-            '-h',
-            tostring(math.clamp(h or 1024, 10, 1024)),
-            tmp,
-            '--export-filename',
-            out, 
-        }})).waitExit()
-        local pngSource = fs.readFileSync(out)
-        fs.unlink(tmp)
-        fs.unlink(out)
+        local image = vips.Image.thumbnail_buffer(svgSource, w)
+        local pngSource = image:pngsave_buffer()
         return pngSource
     end
 --[[ lottie2gif ]]

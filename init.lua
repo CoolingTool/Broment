@@ -19,6 +19,7 @@ local resolver = requireDiscordia('client/Resolver')
 discordia.extensions()
 require('%{format}')()
 
+local vips = require('vips')
 local http = require('coro-http')
 local fs = require('fs')
 local path = require('path')
@@ -51,7 +52,7 @@ for g in io.lines('misc/games.txt') do
     table.insert(games, g)
 end
 
-local variables = { -- update when new variable added -- }
+local variables = { -- update when new variable added (this is injected into environments) -- }
     requireDiscordia = requireDiscordia, module = module,
     resolver = resolver, time = time, class = class, color = color,
     path = path, lpeg = lpeg, timer = timer, json = json,
@@ -61,7 +62,7 @@ local variables = { -- update when new variable added -- }
     defaultColor = defaultColor, require = require, lip = lip,
     logger = logger, log = log, config = config, spawn = spawn,
     openssl = openssl, miniz = miniz, thread = thread,
-    querystring = querystring, slash = slash, 
+    querystring = querystring, slash = slash, vips = vips,
     games = games, F = F} variables.variables = variables 
 
 local bot, prefixes, custom, appInfo, apiPing
