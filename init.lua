@@ -102,7 +102,7 @@ local e = variables.e
 local commands = dofile('cmds', variables)
 variables.commands = commands
 for i, f in pairs(fs.readdirSync('cmds')) do
-    if f ~= 'init.lua' then
+    if f ~= 'init.lua' and f ~= 'disabled' then
         dofile(path.join('cmds', f), variables)
     end
 end
