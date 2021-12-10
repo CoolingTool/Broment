@@ -8,8 +8,8 @@ local header = {{'User-Agent', 'Mozilla/5.0 (compatible; Discordbot/2.0; +https:
 
 function gamejoltRNG:run()
     for i = 1, 30 do
-        local link = host..'/games/a/'..math.random(2,600000)
-        -- as of march 1st 2021 games above 600000 don't exist
+        local link = host..'/games/a/'..math.random(2,670000)
+        -- as of december 10th 2021 games above 670000 don't exist
         
         local succ, res = pcall(http.request, 'HEAD', link, header)
 
