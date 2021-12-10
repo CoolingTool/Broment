@@ -177,15 +177,22 @@ function user:run(param, perms)
         end
     end
 
+    local mAvatar = (localM and help.getServerAvatarFromMember(localM))
+
+    local footer = {text = u.id}
+    if mAvatar then
+        footer.icon_url = u.avatarURL
+    end 
+
     return {
         embed = {
             color = status[2],
-            thumbnail = {url = u.avatarURL},
+            thumbnail = {url = mAvatar or u.avatarURL},
             author = author,
             url = u:getAvatarURL(1024), title = u.tag,
             description = help.boolNil(description ~= '' and ('**Roles**\n'..description)),
             fields = fields,
-            footer = {text = u.id}
+            footer = footer
         }
     }, {safe = true}
 end

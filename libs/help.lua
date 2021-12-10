@@ -386,6 +386,20 @@ local help = {}
             if m then return m end
         end
     end
+--[[ getServerAvatarFromMember ]]
+    function help.getServerAvatarFromMember(m,size,ext)
+        local avatar = m._avatar
+        local g = m.guild
+        if avatar then
+            ext = ext or avatar:find('a_') == 1 and 'gif' or 'png'
+            if size then
+                return ('https://cdn.discordapp.com/guilds/%s/users/%s/avatars/%s.%s?size=%s'):format(g._id, m.id, avatar, ext, size)
+            else
+                return ('https://cdn.discordapp.com/guilds/%s/users/%s/avatars/%s.%s'):format(g._id, m.id, avatar, ext)
+            end
+        end
+        return nil
+    end
 --[[ getWebhookFromUser ]]
     function help.getWebhookFromUser(user)
         if user.discriminator == '0000' and user.bot then
