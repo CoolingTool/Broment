@@ -88,3 +88,10 @@ function water:run(param)
 end
 
 
+local normal = commands 'normal'
+normal.help = 'Become normal, remove the dark thoughts'
+normal.hidden = true
+
+function normal:run()
+    return {mention = self.author, file = "misc/normal.webm"}
+end
