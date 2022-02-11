@@ -4,7 +4,7 @@ Broment is a Discord bot made with [Discordia](https://github.com/SinisterRectus
 
 Invite Broment to your server [here](https://discord.com/api/oauth2/authorize?client_id=745478766775762955&permissions=2147483639&scope=applications.commands%20bot).
 
-This is an in-development port of Broment from Windows to Linux.
+This is was in-development port of Broment from Windows to Linux, but is now the main branch.
 
 This bot is expected to have the Presence and Server Members Intent.
 
