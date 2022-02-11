@@ -87,16 +87,17 @@ function user:run(param, perms)
             description[i] = roles[i].mentionString
         end 
 
-        description = table.concat(description, ' ')
+        local color = m:getColor():toHex()
+        if color ~= '#000000' then
+            color = '('..color..') '
+        else
+            color = ''
+        end
+        description = color .. table.concat(description, ' ')
 
         if m.nickname then
             table.insert(fields,
             {name = 'Nickname', value = m.nickname, inline = true})
-        end
-
-        local color = m:getColor():toHex()
-        if color ~= '#000000' then
-            table.insert(fields, {name = 'Role Color', value = color, inline = true})
         end
 
         if self.guild.ownerId == u.id then
@@ -167,7 +168,7 @@ function user:run(param, perms)
     end
 
     local author
-    if a and a.type == 4 then
+    if a and (a.emojiHash or a.state) then
         author = {name = utf8.char(0x200B)}
         if a.emojiHash then
             author.icon_url = a.emojiURL or help.twemoji(a.emojiHash)

@@ -6,7 +6,8 @@ function events.messageCreate(msg)
     local role = ((guild and help.getBotRole(guild)) or {})
     local botRole = role.mentionString
 
-    local semiMention = '@'..(help.getNick(bot, channel))
+    local nick = help.getNick(bot, channel)
+    local semiMention = nick and '@'..(nick)
     local semiRoleMention = botRole and '@'..(role.name)
     
     local hasCumber = msg.content:find(e.cucumber) or

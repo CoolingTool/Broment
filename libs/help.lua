@@ -51,7 +51,7 @@ local help = {}
                 if i == 1 then
                     rows[1] = s
                 else
-                    if len(rows[#rows]) + len(s) <= (wrap or 22) then
+                    if len(rows[#rows]) + len(s) <= (wrap or 20) then
                         rows[#rows] = rows[#rows] .. sep .. s
                     else
                         rows[#rows + 1] = s
@@ -745,7 +745,7 @@ local help = {}
 --[[ style (for consistent styling) ]]
     help.style = {}
 
-    help.style.line = "***__~~`===================================`~~__***"
+    help.style.line = "***__~~`================================`~~__***"
     help.style.multiLine = help.style.line..' '..help.style.line..'\n'
 
     function help.style.code(...)
